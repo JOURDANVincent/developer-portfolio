@@ -37,7 +37,7 @@
 	main {
 		height: 100%;
 		width: 100%;
-		max-width: 900px;
+		max-width: 940px;
 		margin-inline: auto;
 		display: flex;
 		align-items: center;

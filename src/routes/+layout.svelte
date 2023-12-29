@@ -26,19 +26,36 @@
 
 </svelte:head>
 
-<!-- <Navbar /> -->
 
-<main>
-	<slot />
-</main>
+<div class="app">
+
+	<aside class="left-menu">
+		<Navbar isMenuOpen={true} toggleMenu={() => {}}/>
+	</aside>
+
+	<main class="main">
+		<slot />
+	</main>
+
+	<aside class="right-menu">
+		<!-- <Navbar /> -->
+	</aside>
+
+</div>
 
 <style>
+
+	.app {
+		height: 100%;
+		width: 100%;
+		display: grid;
+		grid-template-columns: 1fr 1000px 1fr;
+		grid-column-gap: 12px;
+	}
 
 	main {
 		height: 100%;
 		width: 100%;
-		max-width: 940px;
-		margin-inline: auto;
 		display: flex;
 		align-items: center;
 	}

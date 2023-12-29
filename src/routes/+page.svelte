@@ -2,10 +2,7 @@
 
     import Linkedin from "$lib/svg/linkedin.svg.svelte";
     import Github from "$lib/svg/github.svg.svelte";
-    import LinkedinPng from "$lib/png/linkedin.png";
-    import GithubPng from "$lib/png/github.png";
-    import me from "$lib/webp/me.webp";
-    import me2 from "$lib/png/me.png";
+    import me2 from "$lib/assets/png/me.png";
  
 </script>
 
@@ -14,11 +11,9 @@
     <div class="main-section">
         
         <div class="hero-box">
-            <p class="hello">Hey ! Moi c'est</p>
-            <h1><strong class="first-name">Vincent JOURDAN</strong></h1>
-            <h2><strong>Développeur</strong> d'applications web & mobiles</h2>
-            <!-- <h4><strong>Java</strong> / <strong>Angular</strong></h4> -->
-            <!-- <p>Je travail actuellement sur une application web avec <strong>JavaScript</strong> & <strong>Java</strong> et une application mobile <strong>Ionic</strong> & <strong>Angular</strong></p> -->
+            <p class="hero-hey">Hey ! Moi c'est</p>
+            <h1>Vincent JOURDAN</h1>
+            <h2>Développeur d'applications web & mobiles</h2>
         </div>
     
         <div class="link-box">
@@ -27,7 +22,7 @@
         </div>
         
         <div class="button-box">
-            <a class="contact" aria-label="Contactez-moi" href='https://www.linkedin.com/in/VincentJourdan' target="_blank" rel="noreferrer">Contact</a>
+            <a class="contact" aria-label="Contactez-moi" href='https://www.linkedin.com/in/vincent-jourdan' target="_blank" rel="noreferrer">Contact</a>
             <a aria-label="en savoir +" href='about'>En savoir +</a>
         </div>
     
@@ -37,10 +32,10 @@
 
         <div class="me">
             <!-- svelte-ignore a11y-img-redundant-alt -->
-            <img src={me2} alt="photo de moi" />
+            <img src={me2} alt="photo de vincent jourdan" />
         </div>
     
-        <div class="overview-box">
+        <div class="resume-box">
             <p><span class="title">A PROPOS </span> Je travaille actuellement chez CGI Amiens sur une application utilisant comme techno <strong>JavaScript</strong> & <strong>Java</strong> pour la partie web et <strong>Ionic</strong> & <strong>Angular</strong> pour le mobile</p>
             <p><span class="title">ETUDES</span> Niveau Bac +2 | <strong>Développeur Web & Web Mobile</strong></p>
             <p><span class="title">FORMATION</span> <strong>React Native</strong></p>
@@ -61,7 +56,7 @@
         margin-bottom: 32px;
     }
 
-    .hello {
+    .hero-hey {
         color: #fff;
         font-size: 1.8rem;
     }
@@ -94,28 +89,31 @@
         color: #fff;
     }
 
-    .overview-box {
+    .resume-box {
         position: absolute;
         bottom: 0;
         right: 0;
-        width: 370px;
+        width: 380px;
+        padding: 6px 0 6px 0;
+        border-bottom: 1px solid #777;
+        border-top: 1px solid #777;
     }
 
-    .overview-box .title {
+    .resume-box .title {
         color: #444;
         font-size: 1.2rem;
         font-family: rajdhani-bold;
     }
 
-    .overview-box strong {
-        color: #777;
+    .resume-box strong {
+        color: #888;
     }
 
     .me {
         z-index: -1;
         position: absolute;
         top: 0;
-        bottom: 130px;
+        bottom: 150px;
         right: 0;
         display: flex;
         align-items: center;
@@ -141,12 +139,6 @@
         margin-right: 12px;
     }
 
-    .link-box img {
-        /* background-color: #E14242;
-        border: 2px solid #000; */
-        border-radius: 5px;
-    }
-
     .button-box {
         min-height: 35px;
     }
@@ -155,7 +147,6 @@
         text-decoration: none;
         color: #fff;
         font-size: 1.2rem;
-        /* font-family: rajdhani-bold; */
         padding-inline: 16px;
         padding-top: 4px; 
         padding-bottom: 2px;

@@ -10,7 +10,7 @@
 
 <section>
 
-   <div class="about">
+   <div id="aboutSection">
 
       <!-- <h1>
          <strong>A propos</strong>
@@ -56,7 +56,7 @@
 
    </div>
 
-   <div class="skill">
+   <div id="skillSection">
       
       <div>
          <h2>
@@ -115,16 +115,17 @@
    section {
       height: 100%;
       width: 100%;
-      display: grid;
+      /* display: grid;
       grid-template-areas: "about skill";
       grid-template-columns: 1fr 420px;
       column-gap: 8px;
-      align-items: center;
+      align-items: center; */
    }
 
-   .about {
+   #aboutSection {
       text-align: justify;
       max-width: 600px;
+      margin-bottom: 48px;
    }
 
    h1 {
@@ -144,7 +145,7 @@
    }
 
    p {
-      font-size: 1.2rem;
+      font-size: 1rem;
       margin-bottom: 8px;
    }
 
@@ -152,7 +153,7 @@
       color: #777;
    }
 
-   .skill {
+   #skillSection {
       /* float: right; */
       /* text-align: right; */
    }

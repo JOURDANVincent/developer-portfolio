@@ -33,12 +33,16 @@
 		<Navbar isMenuOpen={true} toggleMenu={() => {}}/>
 	</aside>
 
-	<main class="main">
+	<!-- <main class="main">
 		<slot />
-	</main>
+	</main> -->
+
+	<slot />
 
 	<aside class="right-menu">
-		<!-- <Navbar /> -->
+		<aside class="right-menu">
+			<!-- <Footer Right /> -->
+		</aside>
 	</aside>
 
 </div>
@@ -49,15 +53,15 @@
 		height: 100%;
 		width: 100%;
 		display: grid;
-		grid-template-columns: 1fr 1000px 1fr;
+		grid-template-columns: 1fr 960px 1fr;
 		grid-column-gap: 12px;
 	}
 
-	main {
-		height: 100%;
+	/* main {
+		height: auto;
 		width: 100%;
 		display: flex;
 		align-items: center;
-	}
+	} */
 
 </style>

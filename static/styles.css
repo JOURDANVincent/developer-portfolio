@@ -28,9 +28,6 @@ html, body {
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-}
-
-body {
 	background-color: #111;
 	background-image: 
 		/* radial-gradient(
@@ -38,7 +35,7 @@ body {
 			#444 100%
 		), */
 		linear-gradient(45deg, #151515 30%, #252525 );
-
+	background-attachment: fixed;
 }
 
 h1, h2, h3, p {
@@ -56,5 +53,6 @@ a:hover, button:hover {
 }
 /* Add a thumb */
 ::-webkit-scrollbar-thumb {
-	background: #E1424290;
+	background: #444;
+	border-radius: 5px;
 }

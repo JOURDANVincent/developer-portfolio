@@ -17,7 +17,7 @@
 
 </script>
 
-<div class="item" on:click={() => progress.set(level)} aria-roledescription="show level">
+<button class="item" on:click={() => progress.set(level)} aria-roledescription="show level">
 
     <img src={base + src} alt={src}>
     
@@ -34,15 +34,17 @@
         </div>  
     </div>
     
-</div>
+</button>
 
 <style lang="css">
 
     .item {
         /* width: 100%; */
         /* max-width: 375px; */
+        background-color: transparent;
         min-height: 46px;
         width: auto;
+        -webkit-backdrop-filter: blur(8px);
         backdrop-filter: blur(8px);
         display: flex;
         flex-direction: row;

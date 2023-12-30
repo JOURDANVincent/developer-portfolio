@@ -43,6 +43,7 @@
         /* max-width: 375px; */
         min-height: 46px;
         width: auto;
+        -webkit-backdrop-filter: blur(8px);
         backdrop-filter: blur(8px);
         display: flex;
         flex-direction: row;

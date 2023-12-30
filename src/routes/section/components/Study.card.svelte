@@ -1,9 +1,11 @@
 <script lang="ts">
+
     export let date:string;
     export let title:string;
     export let place:string;
     export let desc:string;
     export let techno:string;
+
 </script>
 
 <div class="card">
@@ -26,17 +28,19 @@
 <style lang="css">
 
     .card {
-        height: fit-content;
-        background-color: #fff2;
+        height: auto;
+        min-width: 360px;
+        background-color: #0005;
+        -webkit-backdrop-filter: blur(8px);
         backdrop-filter: blur(8px);
-        padding-inline: 24px; padding-top: 18px; padding-bottom: 4px; 
+        padding: 24px; 
+        padding-bottom: 12px;
         margin-bottom: 8px;
-        /* border-radius: 5px; */
-        box-shadow: 2px 2px 10px 1px #0008;
-    }
-
-    .card:last-child {
-        margin-bottom: 0;
+        margin-right: 8px;
+        box-sizing: border-box;
+        /* box-shadow:  2px 2px 10px 2px #fff1; */
+        border: 1px solid #000;
+        border-radius: 3px;
     }
 
     h2 {
@@ -60,6 +64,7 @@
 
     .date {
         /* border-right: 1px solid #fff; */
+        font-size: 2rem;
         padding-right: 10px;
     }
     
@@ -78,7 +83,7 @@
     }
 
     .techno > strong {
-        color: #000; 
+        color: #777; 
         font-weight: bold;
         font-style: italic;  
         padding-left: 10px;

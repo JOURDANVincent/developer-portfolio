@@ -42,6 +42,28 @@ h1, h2, h3, p {
 	padding: 0; margin: 0;
 }
 
+h1 {
+	font-size: 3rem;
+	color: #E14242;
+	margin-bottom: 12px;
+	font-weight: initial;
+}
+
+h2 {
+	font-size: 1.6rem;
+	color: #777;
+	margin-bottom: 8px;
+}
+
+p {
+	font-size: 1.2rem;
+	margin-bottom: 6px;
+}
+
+p strong {
+	color: #777;
+ }
+
 a:hover, button:hover {
 	cursor: pointer;
 }

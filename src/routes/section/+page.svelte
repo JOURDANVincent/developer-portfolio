@@ -7,6 +7,7 @@
    import AboutSection from "./block/About.section.svelte";
    import SkillSection from "./block/Skill.section.svelte";
    import ExperienceSection from "./block/Experience.section.svelte";
+   import StudySection from "./block/Study.section.svelte";
 
 </script>
 
@@ -18,7 +19,8 @@
    </section>
 
    <section id="skill">
-      <h1>Languages & Frameworks</h1>
+      <!-- <h1>Languages & Frameworks</h1> -->
+      <h1>Compétences</h1>
       <SkillSection data={data.skills} />
    </section>
 
@@ -29,6 +31,7 @@
 
    <section id="study">
       <h1>Formations</h1>
+      <StudySection data={data.studies} />
    </section>
 
 </main>
@@ -48,13 +51,6 @@
    #about {
       text-align: justify;
       max-width: 700px;
-   }
-
-   h1 {
-      font-size: 3rem;
-      color: #E14242;
-      margin-bottom: 12px;
-      font-weight: initial;
    }
    
 </style>

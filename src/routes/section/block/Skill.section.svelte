@@ -28,16 +28,7 @@
 </div>
 
 <style lang="css">
- 
-    h2 {
-       font-size: 1.6rem;
-       color: #777;
-    }
- 
-    #skill h2 {
-       margin-bottom: 6px;
-    }
- 
+  
     .skill-box {
        height: 100%;
        display: flex;
@@ -49,7 +40,7 @@
        border-top: 1px solid #7770; */
        /* box-shadow: 2px 2px 5px 2px #0005; */
        /* padding: 18px; */
-       padding-bottom: 12px;
+       /* padding-bottom: 12px; */
        margin-bottom: 12px;
        /* border-top: 1px solid #777;
        border-bottom: 1px solid #777; */

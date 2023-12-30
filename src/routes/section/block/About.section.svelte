@@ -37,15 +37,3 @@
     Mon projet actuel est basé principalement sur les techno <strong>Java</strong> & <strong>Angular</strong>.
     <!-- Tout cela en suivant les <strong>méthodes agiles</strong>. -->
 </p>
-
- <style lang="css">
- 
-    p {
-       font-size: 1rem;
-    }
- 
-    p strong {
-       color: #777;
-    }
-    
- </style>

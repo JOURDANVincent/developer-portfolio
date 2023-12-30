@@ -35,6 +35,7 @@
         left: 5%;
         right: 5%;
         background-color: #fff1;
+        -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(10px);
         border-radius: 5px;
         padding: 12px 24px 12px 24px;

@@ -30,7 +30,7 @@
       { name: 'Porte-folio', path: `${base}/portfolio`, svg: ComputerSvg},
       { name: 'Formations', path: `${base}/section/#study`, svg: ExperienceSvg},
       { name: 'Expériences', path: `${base}/section/#experience`, svg: ExperienceSvg},
-      { name: 'Compétences', path: `${base}/section/#skill`, svg: SkillSvg},
+      { name: 'Techno', path: `${base}/section/#skill`, svg: SkillSvg},
    ]
    $: currentPathName = $page.url.pathname
    $: console.log('curent path: ', $page.url)
@@ -62,8 +62,8 @@
             href={route.path} 
             class="menu-item"
             class:active={currentPathName === route.path}
-            
             on:click={toggleMenu}
+            title={`dirige vers page ${route.path}`}
          >
             <span class="icon"><svelte:component this={route.svg} size={26} color={currentPathName === route.path ? '#E14242' : '#ccc'}/></span>
             <!-- <span class="link">{route.name}</span> -->
@@ -74,20 +74,26 @@
 
    <div class="footer" style:display={elementDisplay}>
       <a 
-         href='https://www.linkedin.com/in/VincentJourdan' target="_blank" rel="noreferrer"
+         href='https://www.linkedin.com/in/VincentJourdan' 
+         target="_blank" rel="noreferrer"
+         title="lien vers mon profil Linkedin"
          class="menu-item contact"
       >
          <span class="icon"><ContactSvg size={26} color={'#E14242'}/></span>
          <!-- <span class="link">Contact</span> -->
       </a>
       <a 
-      href='https://github.com/JOURDANVincent' target="_blank" rel="noreferrer"
+      href='https://github.com/JOURDANVincent' 
+      target="_blank" rel="noreferrer"
+      title="lien vers mon compte Github"
          class="menu-item" 
       >
          <span class="icon"><GithubSvg size={26} color={'#777'} /></span>
       </a>
       <a 
-         href='https://www.linkedin.com/in/VincentJourdan' target="_blank" rel="noreferrer"
+         href='https://www.linkedin.com/in/VincentJourdan' 
+         target="_blank" rel="noreferrer"
+         title="lien vers mon profil Linkedin"
          class="menu-item" 
       >
          <span class="icon"><LinkedinSvg size={26} color={'#777'} /></span>
@@ -110,11 +116,18 @@
       flex-direction: column;
       align-items: center;
       justify-content: space-between;
+      -webkit-backdrop-filter: blur(12px);
       backdrop-filter: blur(12px);
       box-sizing: border-box;
       border: 1px solid #000;
       box-shadow: 3px 0px 10px 2px #0009;
       transition: 0.3s;
+   }
+
+   h1 {
+      font-size: 2rem;
+      font-family: rajdhani-bold;
+      color: #E14242;
    }
 
    .hero {

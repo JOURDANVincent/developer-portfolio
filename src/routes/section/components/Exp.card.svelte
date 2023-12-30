@@ -1,25 +1,27 @@
 <script lang="ts">
+
     export let date:string;
     export let title:string;
     export let place:string;
     export let desc:string[];
     export let techno:any;
+
 </script>
 
 <div class="card">
     
-    <h2>
-        {title}
-    </h2>
-
-    <div class="sub-header">
-        
+    <div class="card-header">
+        <div>
+            <h2>
+                {title}
+            </h2>
+            <h3>
+                {place}
+            </h3>
+        </div>
         <div class="date">
             {date}
         </div>
-        <h3>
-            {place}
-        </h3>
     </div>
 
     <div class="desc">
@@ -48,36 +50,36 @@
 <style lang="css">
 
     .card {
-        display: flex; 
-        flex-direction: column; 
-        justify-content: center;
-        height: 100%;
+        max-width: 660px;
         background-color: #fff2;
+        -webkit-backdrop-filter: blur(8px);
         backdrop-filter: blur(8px);
         color: #fff; 
         text-align: initial;
-        padding-inline: 24px;
+        padding: 24px;
+        padding-inline: 36px;
         margin-bottom: 8px;
         box-sizing: border-box;
-        box-shadow: 2px 2px 10px 1px #0008;
+        box-shadow: 2px 2px 10px 5px #000;
+        border-radius: 3px;
     }
 
-    .sub-header {
-        display: inline-flex;
+    .card-header {
+        display: flex;
+        justify-content: space-between;
         align-items: flex-end;
-        padding: 0;
         font-size: 2rem;
     }
 
     .date {
+        font-size: 4rem;
         font-weight: bold;
-        color: #E14242;
-        margin-right: 10px;
-        padding-right: 10px;
+        color: #000;
     }
 
     h2 {
-        font-size: 1.8rem; 
+        font-size: 2.2rem; 
+        color: #fff;
     }
 
     h3 {
@@ -87,11 +89,12 @@
     p {
         color: #aaa;
         font-weight: bold;
-        margin-bottom: 4px;
+        /* margin-bottom: 4px; */
         font-size: 1.3rem;
     }
 
     .desc p {
+        font-size: 1rem;
         color: #ddd;
         font-weight: initial;
     }
@@ -122,69 +125,5 @@
         font-weight: bold;
         padding-left: 10px;
     }
-
-    /* @media (max-width: 767px) {
-        .card {
-            padding: 18px;
-        }
-        h2 {
-            font-size: 1.6rem;
-            margin-bottom: 8px;
-        }
-        .sub-header {
-            font-size: 1.3rem;
-            margin-bottom: 8px;
-        }
-        h3 {
-            font-size: 1.3rem;
-        }
-        p { font-size:  0.9rem;}
-    }
-
-    @media (min-width: 768px) {
-
-        h2 {
-            font-size: 1.6rem;
-            margin-bottom: 8px;
-        }
-        .sub-header {
-            font-size: 1.3rem;
-            margin-bottom: 8px;
-        }
-        h3 {
-            font-size: 1.3rem;
-        }
-        p { font-size:  1rem;}
-    }
-
-    @media (min-width: 992px) {
-
-        h2 {
-            font-size: 2.2rem;
-            margin-bottom: 8px;
-        }
-        .sub-header {
-            font-size: 1.8rem;
-            margin-bottom: 8px;
-        }
-        h3 {
-            font-size: 1.8rem;
-        }
-    }
-
-    @media (min-width: 1180px) {
-
-        h2 {
-            font-size: 2.6rem;
-        }
-        .sub-header {
-            font-size: 1.6rem;
-            margin-bottom: 8px;
-        }
-        h3 {
-            font-size: 1.6rem;
-        }
-    } */
-
 
 </style>

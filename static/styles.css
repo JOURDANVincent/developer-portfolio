@@ -46,7 +46,7 @@ h1 {
 	font-size: 3rem;
 	color: #E14242;
 	margin-bottom: 12px;
-	font-weight: initial;
+	font-weight: initial;	
 }
 
 h2 {
@@ -62,10 +62,16 @@ p {
 
 p strong {
 	color: #777;
- }
+}
 
 a:hover, button:hover {
 	cursor: pointer;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+	font-size: 1.2rem;
 }
 
 /* SCROLL BAR */

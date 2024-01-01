@@ -29,20 +29,14 @@
 
 <div class="app">
 
-	<aside class="left-menu">
-		<Navbar isMenuOpen={true} toggleMenu={() => {}}/>
+	<aside>
+		<Navbar />
 	</aside>
-
-	<!-- <main class="main">
-		<slot />
-	</main> -->
 
 	<slot />
 
 	<aside class="right-menu">
-		<aside class="right-menu">
-			<!-- <Footer Right /> -->
-		</aside>
+		<!-- <Footer Right /> -->
 	</aside>
 
 </div>
@@ -56,12 +50,5 @@
 		grid-template-columns: 1fr 960px 1fr;
 		grid-column-gap: 12px;
 	}
-
-	/* main {
-		height: auto;
-		width: 100%;
-		display: flex;
-		align-items: center;
-	} */
 
 </style>

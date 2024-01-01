@@ -35,34 +35,22 @@
    $: currentPathName = $page.url.pathname
    $: console.log('curent path: ', $page.url)
 
-   // NAVBAR GESTURE
-   export let isMenuOpen: boolean;
-   export let toggleMenu: any;
-
-   // DYNAMIC STYLE
-   $: elementDisplay = isMenuOpen ? 'flex' : 'none';
-
 </script>
 
-<nav 
-   class="menu" 
->  
+<nav>  
 
    <div class="hero">
       <h1>VJ</h1>
    </div>
 
    <div 
-      class="menu-list" 
-      style:z-index={isMenuOpen ? '10' : '-1'}
-      style:display={elementDisplay}
+      class="menu" 
    >
       {#each allRoutes as route}
          <a 
             href={route.path} 
             class="menu-item"
             class:active={currentPathName === route.path}
-            on:click={toggleMenu}
             title={`dirige vers page ${route.path}`}
          >
             <span class="icon"><svelte:component this={route.svg} size={26} color={currentPathName === route.path ? '#E14242' : '#ccc'}/></span>
@@ -72,7 +60,7 @@
       
    </div>
 
-   <div class="footer" style:display={elementDisplay}>
+   <div class="footer" >
       <a 
          href='https://www.linkedin.com/in/VincentJourdan' 
          target="_blank" rel="noreferrer"
@@ -83,9 +71,9 @@
          <!-- <span class="link">Contact</span> -->
       </a>
       <a 
-      href='https://github.com/JOURDANVincent' 
-      target="_blank" rel="noreferrer"
-      title="lien vers mon compte Github"
+         href='https://github.com/JOURDANVincent' 
+         target="_blank" rel="noreferrer"
+         title="lien vers mon compte Github"
          class="menu-item" 
       >
          <span class="icon"><GithubSvg size={26} color={'#777'} /></span>
@@ -109,9 +97,6 @@
       z-index: 10;
       position: fixed;
       height: 100%;
-      /* background-color: #0003; */
-      /* max-width: calc(100% - 36px); */
-      /* width: calc(100% -200 px); */
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -135,7 +120,7 @@
       padding-top: 12px;
    }
 
-   .menu-list {
+   .menu {
       width: 100%;
       /* max-width: 800px; */
       box-sizing: border-box;

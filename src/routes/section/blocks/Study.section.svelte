@@ -1,7 +1,8 @@
 <script lang="ts">
 
-    // DATA
-    export let data: any;
+    // STORE & DATA
+	import { page } from '$app/stores';
+   const studies = $page.data.studies
 
     // COMPONENTS
     import StudyCard from "../components/Study.card.svelte";
@@ -9,7 +10,7 @@
 </script>
 
 <div class="study_section">
-    {#each data as study}
+    {#each studies as study}
         <StudyCard {...study} />
     {/each}
 </div>

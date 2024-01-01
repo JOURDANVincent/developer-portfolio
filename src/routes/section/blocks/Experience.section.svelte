@@ -1,19 +1,18 @@
 <script lang="ts">
 
-   export let data: any;
+   // STORE & DATA
+	import { page } from '$app/stores';
+   const { experiences, studies } = $page.data
 
    // COMPONENTS
    import ExpCard from "../components/Exp.card.svelte";
-
-   // ICONS
-   
 
    //
    let showExp = false
 
 </script>
 
-<div class="resume_section">
+<div class="resume-section">
 
    <p>
       Depuis janvier 2022, j'exerce le métier de <strong>Développeur Java / Angular</strong> au sein de 
@@ -37,11 +36,11 @@
 
 </div>
 
-<div class="exp_section">
+<div class="exp-section">
 
    <div class="dev-box">
       <h2>Développeur</h2>
-      {#each data as exp}
+      {#each experiences as exp}
          <ExpCard {...exp} />
       {/each}
    </div>
@@ -56,7 +55,7 @@
    {#if showExp}
       <div class="pro-box">
          <h2>Mes autres expériences</h2>
-         {#each data as exp}
+         {#each experiences as exp}
             <ExpCard {...exp} />
          {/each}
       </div>
@@ -66,7 +65,7 @@
 
 <style lang="css">
 
-   .resume_section {
+   .resume-section {
       max-width: 700px;
       text-align: justify;
       margin-bottom: 24px;

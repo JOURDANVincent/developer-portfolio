@@ -50,7 +50,7 @@
 <style lang="css">
 
     .card {
-        max-width: 660px;
+        width: 695px;
         background-color: #fff2;
         -webkit-backdrop-filter: blur(8px);
         backdrop-filter: blur(8px);
@@ -58,23 +58,26 @@
         text-align: initial;
         padding: 24px;
         padding-inline: 36px;
-        margin-bottom: 8px;
+        margin-bottom: 10px;
         box-sizing: border-box;
-        box-shadow: 2px 2px 10px 5px #000;
+        /* box-shadow: 2px 2px 5px 2px #000; */
         border-radius: 3px;
     }
 
     .card-header {
         display: flex;
         justify-content: space-between;
-        align-items: flex-end;
+        align-items: flex-start;
         font-size: 2rem;
     }
 
     .date {
-        font-size: 4rem;
+        /* height: 200px; */
+        font-size: 4.5rem;
+        line-height: 4.5rem;
         font-weight: bold;
         color: #000;
+        vertical-align: text-top;
     }
 
     h2 {

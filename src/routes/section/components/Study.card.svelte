@@ -28,19 +28,23 @@
 <style lang="css">
 
     .card {
-        height: auto;
-        min-width: 360px;
+        /* height: auto; */
+        /* width: auto; */
+        /* min-width: 360px; */
         background-color: #0005;
         -webkit-backdrop-filter: blur(8px);
         backdrop-filter: blur(8px);
         padding: 24px; 
         padding-bottom: 12px;
-        margin-bottom: 8px;
-        margin-right: 8px;
+        /* margin-bottom: 8px; */
         box-sizing: border-box;
         /* box-shadow:  2px 2px 10px 2px #fff1; */
         border: 1px solid #000;
         border-radius: 3px;
+
+        &:first-of-type {
+            margin-right: 8px;
+        }
     }
 
     h2 {

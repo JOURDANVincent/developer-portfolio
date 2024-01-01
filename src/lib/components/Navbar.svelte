@@ -20,40 +20,41 @@
    
    // ROUTES & PATH
    const allRoutes = [
-      { name: 'Accueil', path: `${base}/`, svg: TagSvg}, 
-      // { name: 'A Propos', path: `${base}/about`, svg: AboutSvg},
-      // { name: 'Porte-folio', path: `${base}/portfolio`, svg: ComputerSvg},
-      // { name: 'Formations', path: `${base}/study`, svg: ExperienceSvg},
-      // { name: 'Expériences', path: `${base}/experience`, svg: ExperienceSvg},
-      // { name: 'Compétences', path: `${base}/skill`, svg: SkillSvg},
-      { name: 'A Propos', path: `${base}/section/#about`, svg: AboutSvg},
-      { name: 'Porte-folio', path: `${base}/portfolio`, svg: ComputerSvg},
-      { name: 'Formations', path: `${base}/section/#study`, svg: ExperienceSvg},
-      { name: 'Expériences', path: `${base}/section/#experience`, svg: ExperienceSvg},
-      { name: 'Techno', path: `${base}/section/#skill`, svg: SkillSvg},
+      { name: 'A Propos', path: `/section#about`, svg: AboutSvg},
+      { name: 'Porte-folio', path: `/portfolio`, svg: ComputerSvg},
+      { name: 'Compétences', path: `/section#skill`, svg: SkillSvg},
+      { name: 'Expériences', path: `/section#experience`, svg: ExperienceSvg},
+      { name: 'Formations', path: `/section#study`, svg: ExperienceSvg},
+      { name: 'Contact', path: `/contact`, svg: ContactSvg},
    ]
-   $: currentPathName = $page.url.pathname
-   $: console.log('curent path: ', $page.url)
+
+   // CURRENT ROUTE -> ACTIVE
+   $: currentRoute = base + $page.url.pathname + $page.url.hash
 
 </script>
 
 <nav>  
 
-   <div class="hero">
-      <h1>VJ</h1>
+   <div class="home">
+      <a href={base + '/'} 
+         class="item"
+         class:active={currentRoute === base + '/'}
+         title={`dirige vers page accueil`}
+      >
+         <span class="icon"><TagSvg size={26} color={currentRoute === base + '/' ? '#E14242' : '#ccc'}/></span>
+         <!-- <span class="link">{route.name}</span> -->
+      </a>
    </div>
 
-   <div 
-      class="menu" 
-   >
+   <div class="menu">
+
       {#each allRoutes as route}
-         <a 
-            href={route.path} 
-            class="menu-item"
-            class:active={currentPathName === route.path}
+         <a href={base + route.path} 
+            class="item"
+            class:active={currentRoute === base + route.path}
             title={`dirige vers page ${route.path}`}
          >
-            <span class="icon"><svelte:component this={route.svg} size={26} color={currentPathName === route.path ? '#E14242' : '#ccc'}/></span>
+            <span class="icon"><svelte:component this={route.svg} size={26} color={currentRoute === base + route.path ? '#E14242' : '#ccc'}/></span>
             <!-- <span class="link">{route.name}</span> -->
          </a>
       {/each}
@@ -62,19 +63,10 @@
 
    <div class="footer" >
       <a 
-         href='https://www.linkedin.com/in/VincentJourdan' 
-         target="_blank" rel="noreferrer"
-         title="lien vers mon profil Linkedin"
-         class="menu-item contact"
-      >
-         <span class="icon"><ContactSvg size={26} color={'#E14242'}/></span>
-         <!-- <span class="link">Contact</span> -->
-      </a>
-      <a 
          href='https://github.com/JOURDANVincent' 
          target="_blank" rel="noreferrer"
          title="lien vers mon compte Github"
-         class="menu-item" 
+         class="item" 
       >
          <span class="icon"><GithubSvg size={26} color={'#777'} /></span>
       </a>
@@ -82,11 +74,10 @@
          href='https://www.linkedin.com/in/VincentJourdan' 
          target="_blank" rel="noreferrer"
          title="lien vers mon profil Linkedin"
-         class="menu-item" 
+         class="item" 
       >
          <span class="icon"><LinkedinSvg size={26} color={'#777'} /></span>
       </a>
-      <!-- <div>développé avec <span class="svelte">Svelte JS</span></div> -->
    </div>
 
 </nav>
@@ -109,20 +100,13 @@
       transition: 0.3s;
    }
 
-   h1 {
-      font-size: 2rem;
-      font-family: rajdhani-bold;
-      color: #E14242;
-   }
-
-   .hero {
+   .home {
       min-height: 150px;
       padding-top: 12px;
    }
 
    .menu {
       width: 100%;
-      /* max-width: 800px; */
       box-sizing: border-box;
       padding-inline: 8px;
       margin-inline: auto;
@@ -130,68 +114,40 @@
       overflow: hidden;
    }
 
-   .menu-item {
+   .item {
+      z-index: 11;
       display: flex;
       flex-direction: row;
       align-items: center;
       text-decoration: none;
       padding: 10px;
-      padding-bottom: 6px;
+      padding-bottom:4px;
       box-sizing: border-box;
-      border-bottom: 1px solid #000;
-      /* border-radius: 5px; */
+      border-bottom: 2px solid #000;
       transition: 0.2s;
-   }
-   .menu-item:last-of-type {
-      border-bottom: 1px solid transparent;
-   }
-   .menu-item:hover {
-      background-color: #fff1;
-      box-shadow: inset 2px 2px 5px 2px #0005;
-      border-radius: 5px;
-   }
-/* 
-   .menu-item span {
-      padding: 0;
-   } */
 
-   /* .active {
-      background-color: #fff2;
-      padding-left: 16px;
-      border-bottom: 1px solid transparent;
-   } */
+      &:last-of-type {
+         border-bottom: 1px solid transparent;
+      }
+
+      &:hover {
+         background-color: #fff1;
+         box-shadow: inset 2px 2px 5px 2px #0005;
+         border-radius: 5px;
+      }
+   }
 
    .footer {
-      min-height: 150px;
       display: flex;
       flex-direction: column;
       align-items: center;
-      /* padding-bottom: 6px; */
-   }
-
-   .icon {
-      /* padding-right: 16px; */
-   }
-
-   .link {
-      color: #eee;
-      font-size: 1.4rem;
-      padding-bottom: 2px;
+      padding-bottom: 6px;
    }
 
    @media (min-width: 768px ) { 
 
-      .menu-item {
+      .item {
          padding-inline: 8px;
-      }
-
-      .link {
-         font-size: 1.6rem;
-         padding-left: 12px;
-      }
-
-      .icon {
-         /* padding-right: 12px; */
       }
 
    }

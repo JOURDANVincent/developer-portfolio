@@ -1,10 +1,11 @@
 <script lang="ts">
 
-    // COMPONENTS
-    import SkillItem from "../components/Skill.item.svelte";
+   // STORE & DATA
+	import { page } from '$app/stores';
+   const { professional, mancraft } = $page.data.skills
 
-    // DATA
-    export let data: any;
+   // COMPONENTS
+   import SkillItem from "../components/Skill.item.svelte";
  
 </script>
 
@@ -12,7 +13,7 @@
 <div>
    <h2>Professionnelles</h2>
    <div class="skill-box">
-      {#each data.professional as pro}
+      {#each professional as pro}
          <SkillItem {...pro} />
       {/each}   
    </div>
@@ -21,7 +22,7 @@
 <div>
    <h2>Personnelles</h2>
    <div class="skill-box">
-      {#each data.mancraft as mancraft}
+      {#each mancraft as mancraft}
          <SkillItem {...mancraft} />
       {/each}   
    </div>

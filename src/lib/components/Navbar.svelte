@@ -2,6 +2,7 @@
 
    // REACTIVE
    import { page } from '$app/stores';
+   import { expandNav } from '$lib/stores/store';
 
    // SVG MENU ICONS
    import TagSvg from '$lib/svg/menu/Tag.svg.svelte';
@@ -42,7 +43,10 @@
          title={`dirige vers page accueil`}
       >
          <span class="icon"><TagSvg size={26} color={currentRoute === base + '/' ? '#E14242' : '#ccc'}/></span>
-         <!-- <span class="link">{route.name}</span> -->
+         {#if $expandNav}   
+         <!-- style:color={currentRoute === base + '/' ? '#E14242' : '#fff'}  -->
+            <span class="link" >Accueil</span>
+         {/if}
       </a>
    </div>
 
@@ -55,13 +59,18 @@
             title={`dirige vers page ${route.path}`}
          >
             <span class="icon"><svelte:component this={route.svg} size={26} color={currentRoute === base + route.path ? '#E14242' : '#ccc'}/></span>
-            <!-- <span class="link">{route.name}</span> -->
+            {#if $expandNav}
+               <span class="link"
+               >{route.name}</span>
+            {/if}
          </a>
       {/each}
       
    </div>
 
-   <div class="footer" >
+   <div class="footer" 
+      
+   >
       <a 
          href='https://github.com/JOURDANVincent' 
          target="_blank" rel="noreferrer"
@@ -88,6 +97,7 @@
       z-index: 10;
       position: fixed;
       height: 100%;
+      max-width: 214px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -101,27 +111,34 @@
    }
 
    .home {
-      min-height: 150px;
+      /* min-height: 150px; */
+      width: 100%;
+      /* display: flex; */
+      /* align-items: flex-start;
+      justify-content: flex-start; */
+      padding-inline: 8px;
       padding-top: 12px;
+      box-sizing: border-box;
    }
 
    .menu {
       width: 100%;
       box-sizing: border-box;
       padding-inline: 8px;
-      margin-inline: auto;
+      /* margin-inline: auto; */
       flex-direction: column;
-      overflow: hidden;
+      /* overflow: hidden; */
    }
 
    .item {
       z-index: 11;
+      height: 48px;
       display: flex;
       flex-direction: row;
       align-items: center;
       text-decoration: none;
       padding: 10px;
-      padding-bottom:4px;
+      /* padding-bottom:4px; */
       box-sizing: border-box;
       border-bottom: 2px solid #000;
       transition: 0.2s;
@@ -135,13 +152,32 @@
          box-shadow: inset 2px 2px 5px 2px #0005;
          border-radius: 5px;
       }
+
+      &.active {
+         padding-left: 12px;
+      }
+   }
+
+   .icon {
+      display: flex;
+      justify-self: center;
+   }
+
+   .link {
+      font-size: 1.6rem;
+      line-height: 1.6rem;
+      margin-left: 12px;
+      /* padding-bottom: 4px; */
    }
 
    .footer {
+      width: 100%;
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: flex-start;
+      padding-left: 8px;
       padding-bottom: 6px;
+      box-sizing: border-box;
    }
 
    @media (min-width: 768px ) { 

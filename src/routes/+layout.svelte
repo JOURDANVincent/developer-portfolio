@@ -2,10 +2,16 @@
 	
 	// STORE & DATA
 	import { page } from '$app/stores';
+	import { expandNav } from '$lib/stores/store'
 	// import { SITE_NAME, META_DATA } from '$lib/data/meta.data'
 
 	// COMPONENTS
 	import Navbar from '$lib/components/Navbar.svelte';
+
+	// WINDOWS SIZE
+	$: innerWidth = 0;
+	$: innerHeight = 0;
+	$: expandNav.set(innerWidth >= 1400)
 
 </script>
 
@@ -26,18 +32,24 @@
 
 </svelte:head>
 
+<svelte:window bind:innerWidth bind:innerHeight />
 
 <div class="app">
 
-	<aside>
+	<header>
 		<Navbar />
-	</aside>
+	</header>
 
 	<slot />
 
-	<aside class="right-menu">
-		<!-- <Footer Right /> -->
-	</aside>
+	<footer>
+		<div>
+			fil d'ariane
+		</div>
+		<div>
+			Tous droits réservés | Vincent JOURDAN - 2023
+		</div>
+	</footer>
 
 </div>
 
@@ -49,6 +61,15 @@
 		display: grid;
 		grid-template-columns: 1fr 960px 1fr;
 		grid-column-gap: 12px;
+	}
+
+	footer {
+		display: flex;
+		writing-mode: vertical-lr;
+		justify-content: space-between;
+		align-items: flex-end;
+		padding: 24px 12px;
+		color: #777;
 	}
 
 </style>

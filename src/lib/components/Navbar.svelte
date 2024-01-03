@@ -44,7 +44,6 @@
       >
          <span class="icon"><TagSvg size={26} color={currentRoute === base + '/' ? '#E14242' : '#ccc'}/></span>
          {#if $expandNav}   
-         <!-- style:color={currentRoute === base + '/' ? '#E14242' : '#fff'}  -->
             <span class="link" >Accueil</span>
          {/if}
       </a>
@@ -60,8 +59,7 @@
          >
             <span class="icon"><svelte:component this={route.svg} size={26} color={currentRoute === base + route.path ? '#E14242' : '#ccc'}/></span>
             {#if $expandNav}
-               <span class="link"
-               >{route.name}</span>
+               <span class="link">{route.name}</span>
             {/if}
          </a>
       {/each}
@@ -78,6 +76,9 @@
          class="item" 
       >
          <span class="icon"><GithubSvg size={26} color={'#777'} /></span>
+         {#if $expandNav}
+            <span class="link">GitHub</span>
+         {/if}
       </a>
       <a 
          href='https://www.linkedin.com/in/VincentJourdan' 
@@ -86,6 +87,9 @@
          class="item" 
       >
          <span class="icon"><LinkedinSvg size={26} color={'#777'} /></span>
+         {#if $expandNav}
+            <span class="link">Linkedin</span>
+         {/if}
       </a>
    </div>
 
@@ -147,7 +151,8 @@
          border-bottom: 1px solid transparent;
       }
 
-      &:hover {
+      &:hover,
+      &:focus {
          background-color: #fff1;
          box-shadow: inset 2px 2px 5px 2px #0005;
          border-radius: 5px;

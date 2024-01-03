@@ -11,7 +11,7 @@
 	// WINDOWS SIZE
 	$: innerWidth = 0;
 	$: innerHeight = 0;
-	$: expandNav.set(innerWidth >= 1400)
+	$: expandNav.set(innerWidth >= 1460)
 
 </script>
 
@@ -43,12 +43,12 @@
 	<slot />
 
 	<footer>
-		<div>
+		<!-- <div>
 			fil d'ariane
 		</div>
 		<div>
 			Tous droits réservés | Vincent JOURDAN - 2023
-		</div>
+		</div> -->
 	</footer>
 
 </div>

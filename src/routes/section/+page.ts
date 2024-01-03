@@ -5,7 +5,6 @@ export async function load() {
 
         skills: {
             professional: [
-
                 {
                     title: "Java",
                     src: "/images/svg/brand_icons/java.svg",
@@ -67,10 +66,7 @@ export async function load() {
                     level: 80,
                 },
             ],
-    
             mancraft: [
-                
-               
                 {
                     title: "React Native",
                     src: "/images/svg/brand_icons/react-native.svg",
@@ -123,21 +119,116 @@ export async function load() {
         experiences: [
             {
                 date: "2022",
-                title: "Développeur Java / Angular",
+                post: "Développeur Java / Angular",
                 place: "CGI - Amiens",
                 desc: [
                     "Développement évolutions / Maintenance applications web & mobile",
-                    // "Développement des évolutions et correctifs sur VM Linux",
                     "Démonstration / Test sur environnement d'intégration dockérisé",
-                    // "Travail en équipe suivant les méthodes agiles",
-                    // "Utilisation IntelliJ / VS Code / Android Studio / GitLab",
                 ],
                 techno: {
-                    web: "HTML , CSS, JavaScript, JAVA",
-                    mobile: "Angular, Ionic, TypeScript",
+                    web: "HTML, CSS, JavaScript, JAVA, Spring Boot, Hibernate",
+                    mobile: "Angular, Ionic, Capacitor, TypeScript",
                     desktop: "Electron, Angular, TypeScript"
                 }
             },
+            {
+                date: "2018-2020",
+                place: "TECHNIQUES & INDUSTRIES",
+                post: "Technico-commercial",
+                desc: [
+                    "Recherche client et partenariat / devis / accueil client",
+                    "Développement projet objet connecté : Commande à distance équipement via SMS",
+                    "Paramétrage / Mise en service / SAV variateur de vitesse / Assemblage pompe de forage"
+                ]    
+            },
+            {
+                date: "2013-2018",
+                place: "MULTIVAC",
+                post: "Technicien SAV/CE",
+                desc: [
+                    "Entretien préventif et curatif du parc machine confié",
+                    "Entretien, dépannage, amélioration et rétrofit",
+                    "devis pièces, TPM et PDM, visite client, assistance téléphonique"
+                ]
+            },
+            {
+                date: "2013",
+                place: "PPG",
+                post: "Technicien",
+                desc: [
+                    "Dépannage en électricité et automatisme (machine et réseau automate)",
+                    "Petits travaux neufs (coffrets électriques, remise à niveau, programmation automate)"
+                ]  
+            },
+            {
+                date: "2011-2012",
+                place: "NEXANS",
+                post: "Technicien",
+                desc: [
+                    "Intervenant en électricité",
+                    "Remise à niveau, automatisation et amélioration du parc"
+                ]
+            },
+            {
+                date: "2011",
+                place: "VIRBAC",
+                post: "Technicien",
+                desc: [
+                    "Entretien et Dépannage des installations de production"
+                ]
+            },
+            {
+                date: "2008-2010",
+                place: "RACLOT",
+                post: "Technicien",
+                desc: [
+                    "Entretien et dépannage du site complet",
+                    "Devis, gestion du stock maintenance",
+                    "Conduite et entretien chaufferie"
+                ]
+            },
+            {
+                date: "2008",
+                place: "EMIN LEYDIER",
+                post: "Électro-mécanicien",
+                desc: [
+                    "Électro-mécanicien secteur cartonnerie"
+                ]
+            },
+            {
+                date: "2007",
+                place: "NESTLE PURINA",
+                post: "Électricien / Automaticien",
+                desc: [
+                    "Développement projet objet connecté : Commande à distance équipement via SMS",
+                    "Recherche client et partenariat / devis / accueil client",
+                    "Paramétrage / Mise en service / SAV variateur de vitesse / Assemblage pompe de forage"
+                ]
+            },
+            {
+                date: "2006-2007",
+                place: "DUNLOP",
+                post: "Électricien secteur B1/B2",
+                desc: [
+                    "Intervenant en électricité et automatisme sur lignes de confection/cuisson/contrôle"
+                ] 
+            },
+            {
+                date: "2006",
+                place: "GOODYEAR",
+                post: "Mécanicien",
+                desc: [
+                    "Mécanicien presses de cuisson pneu agraire"
+                ]
+            },
+            {
+                date: "2005",
+                place: "AIRBUS",
+                post: "Monteur / Ajusteur",
+                desc: [
+                    "Mécanicien monteur ajusteur secteur finition sur Airbus A320/321/321B"
+                ]
+            }
         ],
 
         studies: [

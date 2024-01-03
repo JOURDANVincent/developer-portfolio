@@ -57,7 +57,8 @@
     h3 {
         font-size: 1.2rem; 
         font-weight: bold; 
-        color: #E14242; 
+        /* color: #E14242;  */
+        color: #e37070;
         margin: 2px 0 2px 0;
     }
     .h3-span {

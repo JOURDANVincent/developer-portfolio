@@ -9,7 +9,7 @@
 
 </script>
 
-<div class="study_section">
+<div class="study-section">
     {#each studies as study}
         <StudyCard {...study} />
     {/each}
@@ -17,7 +17,7 @@
 
 <style lang="css">
 
-    .study_section {
+    .study-section {
         display: flex;
         flex-direction: row;
         justify-content: flex-start;

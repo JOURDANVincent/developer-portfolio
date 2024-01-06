@@ -246,14 +246,27 @@ export async function load() {
                desc: "RNCP 31114, Niveau 5, Bac+2",
                techno: "HTML, CSS, JS, PHP, SQL"
             },
-           //  {
-           //     date: "2002-2004",
-           //     title: "BTS - Mécanique & Automatisme Industriel",
-           //     place: "CFAI Somme | VALEO - Amiens",
-           //     desc: "Diplôme en alternance obtenu en 2004",
-           //     // techno: "Télémécanique, Siemens"
-           //     techno: "",
-           //  },
+            // {
+            //    date: "2002-2004",
+            //    title: "BTS - Mécanique & Automatisme Industriel",
+            //    place: "CFAI Somme | VALEO - Amiens",
+            //    desc: "",
+            //    techno: ""
+            // },
+            // {
+            //     date: "2001-2002",
+            //     title: "BTS - Maintenance Industrielle",
+            //     place: "Edouard Branly - Amiens",
+            //     desc: "",
+            //     techno: ""
+            // },
+            // {
+            //     date: "1998-2001",
+            //     title: "BAC - STI Génie en Electrotechnique",
+            //     place: "Edouard Branly - Amiens",
+            //     desc: "",
+            //     techno: ""
+            // },
         ],
 
         resume: [

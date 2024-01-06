@@ -22,8 +22,8 @@
         </div>
         
         <div class="buttons">
-            <a class="linkedin" aria-label="contactez-moi" href='https://www.linkedin.com/in/vincent-jourdan' target="_blank" rel="noreferrer">Contact</a>
-            <a class="about" aria-label="en savoir +" href='about'>En savoir +</a>
+            <a class="contact" aria-label="vers page contact" href='contact'>Contact</a>
+            <a class="about" aria-label="vers page profile" href='about'>En savoir +</a>
         </div>
     
     </div>
@@ -112,7 +112,7 @@
                 border: 1px solid #e14242;
             }
 
-            & .linkedin {
+            & .contact {
                 background-color: #E14242;
                 border: 1px solid #000;
                 margin-right: 8px;

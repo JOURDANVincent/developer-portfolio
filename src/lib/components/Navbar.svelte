@@ -57,7 +57,7 @@
             class:active={currentRoute === base + route.path}
             title={`dirige vers page ${route.path}`}
          >
-            <span class="icon"><svelte:component this={route.svg} size={26} color={currentRoute === base + route.path ? '#E14242' : '#ccc'}/></span>
+            <span class="icon"><svelte:component this={route.svg} size={26} color={currentRoute === base + route.path ? '#E14242' : '#777'}/></span>
             {#if $expandNav}
                <span class="link">{route.name}</span>
             {/if}
@@ -151,7 +151,7 @@
          border-bottom: 1px solid transparent;
       }
 
-      &:hover,
+      /* &:hover,
       &:focus {
          background-color: #fff1;
          box-shadow: inset 2px 2px 5px 2px #0005;
@@ -160,7 +160,7 @@
 
       &.active {
          padding-left: 12px;
-      }
+      } */
    }
 
    .icon {

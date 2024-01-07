@@ -36,20 +36,11 @@
 
 <div class="app">
 
-	<header>
-		<Navbar />
-	</header>
+	<Navbar />
 
-	<slot />
-
-	<footer>
-		<!-- <div>
-			fil d'ariane
-		</div>
-		<div>
-			Tous droits réservés | Vincent JOURDAN - 2023
-		</div> -->
-	</footer>
+	<main>
+		<slot />
+	</main>
 
 </div>
 
@@ -58,9 +49,16 @@
 	.app {
 		height: 100%;
 		width: 100%;
-		display: grid;
-		grid-template-columns: 1fr 960px 1fr;
-		grid-column-gap: 12px;
+	}
+
+	main {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		min-height: 100%;
+		max-width: 940px;
+		margin-inline: auto;
 	}
 
 	footer {

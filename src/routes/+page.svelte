@@ -22,8 +22,8 @@
         </div>
         
         <div class="buttons">
-            <a class="contact" aria-label="vers page contact" href='contact'>Contact</a>
-            <a class="about" aria-label="vers page profile" href='section'>En savoir +</a>
+            <a class="contact" aria-label="vers page contact" href='/contact'>contact</a>
+            <a class="moreAbout" aria-label="vers page profile" href='/section'>en savoir <span>+</span></a>
         </div>
     
     </div>
@@ -104,17 +104,40 @@
         }
 
         & .buttons {
-            min-height: 35px;
 
             & a {
-                padding: 4px 16px 2px 16px;
-                border-radius: 10px;
+                height: 30px;
+                background-color: transparent;
+                display: inline-flex;
+                align-items: center;
+                padding-left: 18px;
+                margin-top: 12px;
+                outline: none;
+                border-radius: 15px;
                 border: 1px solid #e14242;
+                color: #fff;
+                font-size: 1.2rem;
+                box-sizing: content-box;
+
+                & span {
+                    height: 100%;
+                    width: 30px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    background-color: #e14242;
+                    color: #000;
+                    font-size: 2.5rem;
+                    border-radius: 15px;
+                    border: 1px solid #e14242;
+                    margin-left: 12px;
+                }
             }
 
             & .contact {
                 background-color: #E14242;
                 border: 1px solid #000;
+                padding-right: 18px;
                 margin-right: 8px;
             }
         }

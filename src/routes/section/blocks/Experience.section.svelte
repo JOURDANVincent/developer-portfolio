@@ -105,20 +105,22 @@
          padding: 12px 0;
          padding-right: 36px;
          display: flex;
-         justify-content: flex-end;
+         justify-content: center;
          align-items: center;
       }
 
       & .date {
+         height: 100%;
          width: 100%;
-         background-color: #fff2;
+         background-color: #0002;
          font-size: 5rem;
          line-height: 5rem;
          font-weight: bold;
          text-align: center;
-         color: #000;
-         border-radius: 30px;
-         border: 1px solid #444;
+         color: #444;
+         border-radius: 3px;
+         border-right: 1px solid #444;
+         border-left: 1px solid #444;
          padding: 10px;
       }
    }

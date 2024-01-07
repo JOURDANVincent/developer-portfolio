@@ -68,10 +68,10 @@
 
     h3 {
         /* color: #E14242; */
-        color: #e37070;
+        color: #E14242;
         font-weight: bold;
         font-size: 1.4rem; 
-        font-weight: normal; 
+        font-weight: bold; 
     }
     
     p {

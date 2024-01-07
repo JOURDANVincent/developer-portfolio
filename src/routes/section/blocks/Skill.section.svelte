@@ -2,7 +2,7 @@
 
    // STORE & DATA
 	import { page } from '$app/stores';
-   const { professional, mancraft } = $page.data.skills
+   const { professional, personal } = $page.data.skills
 
    // COMPONENTS
    import SkillItem from "../components/Skill.item.svelte";
@@ -22,8 +22,8 @@
 <div>
    <h2>Personnelles</h2>
    <div class="skill-box">
-      {#each mancraft as mancraft}
-         <SkillItem {...mancraft} />
+      {#each personal as perso}
+         <SkillItem {...perso} />
       {/each}   
    </div>
 </div>

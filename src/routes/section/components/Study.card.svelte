@@ -50,6 +50,7 @@
         font-size: 1.2rem; 
         font-weight: bold; 
         color: #e37070;
+        color: #777;
         margin: 2px 0 2px 0;
     }
     .h3-span {

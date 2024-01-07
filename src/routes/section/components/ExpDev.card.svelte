@@ -90,7 +90,7 @@
     h3 {
         color: #E14242;
         font-size: 2rem; 
-        font-weight: normal; 
+        font-weight: bold; 
     }
     
     p {

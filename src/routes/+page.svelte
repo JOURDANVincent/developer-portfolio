@@ -23,7 +23,7 @@
         
         <div class="buttons">
             <a class="contact" aria-label="vers page contact" href='contact'>Contact</a>
-            <a class="about" aria-label="vers page profile" href='about'>En savoir +</a>
+            <a class="about" aria-label="vers page profile" href='section'>En savoir +</a>
         </div>
     
     </div>
@@ -47,7 +47,7 @@
 
     main {
 		display: grid;
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 1fr 410px;
         column-gap: 8px;
         align-items: center;
 	}
@@ -121,8 +121,6 @@
     }
 
     .resume {
-
-        height: auto;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
@@ -137,7 +135,7 @@
         }
 
         & .overview {
-            width: 420px;
+            width: 100%;
             padding: 8px 0 0px 0;
             border-bottom: 1px solid #777;
             border-top: 1px solid #777;

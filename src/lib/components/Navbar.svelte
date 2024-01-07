@@ -9,6 +9,7 @@
 	import AboutSvg from '$lib/svg/menu/About.svg.svelte';
    import ComputerSvg from '$lib/svg/menu/Computer.svg.svelte';
    import ExperienceSvg from '$lib/svg/menu/Experience.svg.svelte';
+   import StudySvg from '$lib/svg/menu/Study.svg.svelte';
    import SkillSvg from '$lib/svg/menu/Skill.svg.svelte';
    import ContactSvg from '$lib/svg/menu/Contact.svg.svelte';
    
@@ -21,11 +22,11 @@
    
    // ROUTES & PATH
    const allRoutes = [
-      { name: 'A Propos', path: `/section#about`, svg: AboutSvg},
-      { name: 'Porte-folio', path: `/portfolio`, svg: ComputerSvg},
+      { name: 'A Propos', path: `/section`, svg: AboutSvg},
       { name: 'Compétences', path: `/section#skill`, svg: SkillSvg},
       { name: 'Expériences', path: `/section#experience`, svg: ExperienceSvg},
-      { name: 'Formations', path: `/section#study`, svg: ExperienceSvg},
+      { name: 'Formations', path: `/section#study`, svg: StudySvg},
+      { name: 'Porte-folio', path: `/portfolio`, svg: ComputerSvg},
       { name: 'Contact', path: `/contact`, svg: ContactSvg},
    ]
 
@@ -34,7 +35,7 @@
 
 </script>
 
-<nav>  
+<nav style="display: {currentRoute === base + '/' ? 'none' : 'flex'}">  
 
    <div class="home">
       <a href={base + '/'} 
@@ -57,7 +58,7 @@
             class:active={currentRoute === base + route.path}
             title={`dirige vers page ${route.path}`}
          >
-            <span class="icon"><svelte:component this={route.svg} size={26} color={currentRoute === base + route.path ? '#E14242' : '#777'}/></span>
+            <span class="icon"><svelte:component this={route.svg} size={26} color={currentRoute === base + route.path ? '#E14242' : '#ccc'}/></span>
             {#if $expandNav}
                <span class="link">{route.name}</span>
             {/if}

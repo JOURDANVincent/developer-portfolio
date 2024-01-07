@@ -2,7 +2,7 @@
 	
 	// STORE & DATA
 	import { page } from '$app/stores';
-	import { expandNav } from '$lib/stores/store'
+	import { expandNav, margWidth } from '$lib/stores/store'
 	// import { SITE_NAME, META_DATA } from '$lib/data/meta.data'
 
 	// COMPONENTS
@@ -12,6 +12,7 @@
 	$: innerWidth = 0;
 	$: innerHeight = 0;
 	$: expandNav.set(innerWidth >= 1460)
+	$: margWidth.set((innerWidth - 940) / 2)
 
 </script>
 

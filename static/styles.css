@@ -37,6 +37,7 @@ html, body {
 		linear-gradient(45deg, #151515 30%, #252525 );
 	background-attachment: fixed;
 	/* background-size: contain; */
+	/* box-sizing: border-box; */
 }
 
 h1, h2, h3, p {

@@ -65,8 +65,14 @@
             </div>
          {/each}
       </div>
+      
       <div class="content">
          <ExpMainCard {...experiences[activeExp]} />
+         <div class="dot-box">
+            {#each dates as date, i}
+               <div class="dot" class:active={i == activeExp}></div>
+            {/each}
+         </div>
       </div>
    </div>
 
@@ -142,6 +148,36 @@
          border-radius: 5px;
          border-right: 1px solid #444;
          border-left: 1px solid #444;     
+      }
+
+      & .content {
+         position: relative;
+         height: 100%;
+
+         & .dot-box {
+            position: relative;
+            bottom: 30px;
+            left: 34px;
+            height: 100%;
+            width: 240px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding-top: 6px;
+            padding-bottom: 6px;
+
+            & .dot {
+               height: 4px;
+               width: 16px;
+               margin-bottom: 1px;
+               background-color: #fff2;
+
+               &.active {
+                  background-color: #fff;
+               }
+            }
+         }
       }
    }
 

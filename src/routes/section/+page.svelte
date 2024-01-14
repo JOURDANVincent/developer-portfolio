@@ -9,7 +9,7 @@
 </script>
 
 <section id="about">
-   <h1>A propos</h1>
+   <!-- <h1>A propos</h1> -->
    <AboutSection />
 </section>
 
@@ -33,10 +33,14 @@
    section {
       width: 100%;
       text-align: justify;
-      padding-bottom: 72px;
+      padding-top: 72px;
+      /* box-sizing: border-box; */
 
-      &:first-of-type {
-         margin-top: 72px;
+      /* &:first-of-type {
+         padding-top: 108px;
+      } */
+      &:last-of-type {
+         padding-bottom: 72px;
       }
    }
 

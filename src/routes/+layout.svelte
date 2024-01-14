@@ -60,6 +60,7 @@
 		min-height: 100%;
 		max-width: 940px;
 		margin-inline: auto;
+		box-sizing: border-box;
 	}
 
 	footer {
@@ -70,5 +71,20 @@
 		padding: 24px 12px;
 		color: #777;
 	}
+
+	@media (min-width: 991px) {
+
+		main {
+			max-width: 800px;
+		}
+	}
+
+	@media (min-width: 1200px) {
+
+		main {
+			max-width: 940px;
+		}
+	}
+
 
 </style>

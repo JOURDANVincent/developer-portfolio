@@ -66,7 +66,7 @@ export async function load() {
                     level: 80,
                 },
             ],
-            mancraft: [
+            personal: [
                 {
                     title: "React Native",
                     src: "/images/svg/brand_icons/react-native.svg",

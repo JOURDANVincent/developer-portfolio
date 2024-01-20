@@ -47,44 +47,22 @@
       box-sizing: border-box;
    }
 
-   @media (max-width: 797px) {
-
-   }
-
-   @media (min-width: 798px) {
-
-      .project-box {
-         display: grid;
-         flex-wrap: wrap;
-         grid-template-columns: 1fr 1fr;
-         gap: 12px;
-      }
-   }
-
    .project-box {
       box-sizing: border-box;
       padding-top: 96px;
       padding-bottom: 42px;
 
       & .card {
-         height: auto;
-         /* width: 50%; */
-         /* padding: 0 12pxpx; */
          box-sizing: border-box;
          background-color: #0001;
          border-radius: 6px;
          overflow: hidden;
          margin-right: 6px;
-         /* padding: 6px; */
-         /* margin-inline: 2px; */
          margin-bottom: 24px;
          border-bottom: 1px solid #444;
          box-shadow: 2px 2px 5px 2px #0002;
 
          & img {
-            /* height: 100%; */
-            /* padding: 24px;
-            padding-top: 2px; */
             width: 100%;
             object-fit: contain;
             box-sizing: border-box;
@@ -98,7 +76,7 @@
             & .more {
                z-index: 2;
                position: absolute;
-               top: 8px;
+               top: 2px;
                right: 12px;
                height: 30px;
                background-color: transparent;
@@ -129,21 +107,19 @@
                   border-radius: 10px;
                   /* border: 1px solid #e14242; */
                   margin-left: 12px;
-            }
+               }
             }
 
             & h2 {
                color: #fff;
-               line-height: 3rem;
-               font-size: 2.4rem;
+               line-height: 2.4rem;
+               font-size: 2rem;
             }
 
             & h3 {
                color: #777;
-               /* height: 1.6rem; */
-               font-size: 1.3rem;
-               /* border-bottom: 4px solid #000;
-               margin-bottom: 12px; */
+               font-size: 1.1rem;
+               margin-bottom: 4px;
             }
 
             & .inner {
@@ -152,6 +128,7 @@
                overflow: hidden;
 
                & p {
+                  font-size: 0.8rem;
                   padding: 0;
                   margin:  0;
                }
@@ -159,6 +136,25 @@
          }
 
          
+      }
+   }
+
+   @media (min-width: 798px) {
+
+      .project-box {
+         display: grid;
+         flex-wrap: wrap;
+         grid-template-columns: 1fr 1fr;
+         gap: 12px;
+      }
+
+      h2 {
+         line-height: 3rem;
+         font-size: 2.4rem;
+      }
+
+      & h3 {
+         font-size: 1.3rem;
       }
    }
    

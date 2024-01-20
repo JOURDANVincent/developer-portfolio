@@ -15,6 +15,8 @@
 
 <section>
 
+   <!-- <h1>Porte-folio</h1> -->
+
    <div class="project-box">
       {#each projects as project}
          
@@ -45,19 +47,19 @@
       height: 100%;
       width: 100%;
       box-sizing: border-box;
+      padding-inline: 8px;
    }
 
    .project-box {
       box-sizing: border-box;
-      padding-top: 96px;
-      padding-bottom: 42px;
+      padding-top: 24px;
+      padding-bottom: 12px;
 
       & .card {
          box-sizing: border-box;
          background-color: #0001;
          border-radius: 6px;
          overflow: hidden;
-         margin-right: 6px;
          margin-bottom: 24px;
          border-bottom: 1px solid #444;
          box-shadow: 2px 2px 5px 2px #0002;
@@ -139,13 +141,24 @@
       }
    }
 
-   @media (min-width: 798px) {
+   @media (min-width: 768px) {
+
+      section {
+         padding-top: 36px;
+         padding-inline: 24px;
+      }
 
       .project-box {
          display: grid;
          flex-wrap: wrap;
          grid-template-columns: 1fr 1fr;
          gap: 12px;
+      }
+
+      .card {
+         overflow: hidden;
+         margin-right: 6px;
+         margin-bottom: 24px;
       }
 
       h2 {
@@ -155,6 +168,13 @@
 
       & h3 {
          font-size: 1.3rem;
+      }
+   }
+
+   @media (min-width: 992px) {
+
+      section {
+         padding: 36px 0 0 0;
       }
    }
    

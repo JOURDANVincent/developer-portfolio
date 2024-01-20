@@ -6,7 +6,7 @@
  
 </script>
 
-<main>
+<div class="main">
     
     <div class="hero">
         
@@ -41,16 +41,9 @@
 
     </div>
 
-</main>
+</div>
 
 <style>
-
-    main {
-		display: grid;
-        grid-template-columns: 1fr 410px;
-        column-gap: 8px;
-        align-items: center;
-	}
 
     p {
 
@@ -179,6 +172,39 @@
             & strong {
                 color: #888;
             }
+        }
+    }
+
+    @media (max-width: 767px) {
+
+        img {
+            width: 90%;
+            object-fit: contain;
+        }
+
+        h2 {
+            font-size: 2rem;
+        }
+    }
+
+    @media (max-width: 991px) {
+
+        img {
+            position: absolute;
+        }
+
+        .resume {
+            margin-top: 56px;
+        }
+    }
+
+    @media (min-width: 992px) {
+
+        .main {
+            display: grid;
+            grid-template-columns: 1fr 410px;
+            column-gap: 8px;
+            align-items: center;
         }
     }
 

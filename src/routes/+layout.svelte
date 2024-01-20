@@ -37,7 +37,7 @@
 
 <div class="app">
 
-	<Navbar />
+	<!-- <Navbar /> -->
 
 	<main>
 		<slot />
@@ -65,7 +65,7 @@
 	@media (min-width: 792px) {
 
 		main {
-			max-width: 680px;
+			/* max-width: 680px; */
 			margin-inline: auto;
 		}
 	}

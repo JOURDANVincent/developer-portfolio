@@ -58,9 +58,16 @@
 		justify-content: center;
 		align-items: center;
 		min-height: 100%;
-		max-width: 940px;
-		margin-inline: auto;
 		box-sizing: border-box;
+		padding-inline: 8px;
+	}
+
+	@media (min-width: 792px) {
+
+		main {
+			max-width: 940px;
+			margin-inline: auto;
+		}
 	}
 
 	footer {
@@ -75,14 +82,21 @@
 	@media (min-width: 991px) {
 
 		main {
-			max-width: 800px;
+			max-width: 880px;
 		}
 	}
 
-	@media (min-width: 1200px) {
+	@media (min-width: 1180px) {
 
 		main {
-			max-width: 940px;
+			max-width: 960px;
+		}
+	}
+
+	@media (min-width: 1600px) {
+
+		main {
+			max-width: 1100px;
 		}
 	}
 

@@ -10,7 +10,7 @@
 
    <div class="contact">
 
-      <!-- <h1>Contact</h1> -->
+      <h1>Contact</h1>
 
       <div class="identity">
          <div class=detail>Nom <span>JOURDAN</span></div>
@@ -57,6 +57,13 @@
       grid-template-columns: 1fr 280px;
       column-gap: 48px;
       align-items: flex-end;
+      /* background-color: #fff1; */
+      box-shadow: 2px 2px 10px 2px #000;
+      border-bottom: 1px solid #444;
+      border-top: 1px solid #444;
+      padding: 36px;
+      padding-bottom: 24px;
+      border-radius: 5px;
    }
 
    .contact {
@@ -71,7 +78,7 @@
 
       & .identity {
          margin-bottom: 24px;
-         font-size: 1.8rem;
+         font-size: 1.4rem;
 
          & .detail {
             color: #777;
@@ -105,8 +112,8 @@
          }
 
          & .linkName {
-            font-size: 2.6rem;
-            line-height: 2.6rem;
+            font-size: 2rem;
+            line-height: 2.4rem;
             margin-left: 12px;
             padding-top: 6px;
          }

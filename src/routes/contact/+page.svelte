@@ -52,18 +52,12 @@
 <style lang="css">
 
    section {
-      width: 700px;
-      display: grid;
-      grid-template-columns: 1fr 280px;
-      column-gap: 48px;
-      align-items: flex-end;
-      /* background-color: #fff1; */
-      box-shadow: 2px 2px 10px 2px #000;
-      border-bottom: 1px solid #444;
-      border-top: 1px solid #444;
-      padding: 36px;
+      width: 100%;
+      justify-content: center;
+      padding-inline: 24px;
+      padding-top: 36px;
       padding-bottom: 24px;
-      border-radius: 5px;
+      box-sizing: border-box;
    }
 
    .contact {
@@ -71,60 +65,89 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+   }
 
-      & h1 {
-         margin-bottom: 32px;
-      }
+   .identity {
+      margin-bottom: 24px;
+      font-size: 1.4rem;
+   }
 
-      & .identity {
-         margin-bottom: 24px;
-         font-size: 1.4rem;
+   .detail {
+      color: #777;
+   }
 
-         & .detail {
-            color: #777;
-         }
+   span {
+      color: #fff;
+   }
 
-         & span {
-            color: #fff;
-         }
-      }
+   p {
+      margin-bottom: 0;
+   }
 
-      & p {
-         margin-bottom: 0;
-      }
+   a {
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+   }
+   a:first-of-type {
+      margin-bottom: 24px;
+   }
+   a:hover {
+      color: #E14242;
+   }
 
-      & a {
-         display: inline-flex;
-         align-items: center;
-         text-decoration: none;
+   .iconSvg {
+      display: flex;
+      justify-self: center;
+   }
 
-         &:first-of-type {
-            margin-bottom: 24px;
-         }
-
-         &:hover {
-            color: #E14242;
-         }
-
-         & .iconSvg {
-            display: flex;
-            justify-self: center;
-         }
-
-         & .linkName {
-            font-size: 2rem;
-            line-height: 2.4rem;
-            margin-left: 12px;
-            padding-top: 6px;
-         }
-      }
+   .linkName {
+      font-size: 2rem;
+      line-height: 2.4rem;
+      margin-left: 12px;
+      padding-top: 6px;
    }
 
    .map {
       height: 100%;
+      margin-top: 24px;
 
       & img {
+         width: 100%;
+      }
+   }
+
+   @media(min-width: 768px) {
+
+      section {
+         max-width: 800px;
+         display: grid;
+         grid-template-columns: 1fr 280px;
+         column-gap: 48px;
+         align-items: flex-end;
+         padding-inline: 42px;
+      }
+
+      h1 {
+         margin-bottom: 32px;
+      }
+
+      .map {
+         height: 100%;
+      }
+      img {
          height: 400px;
+      }
+   
+   }
+
+   @media(min-width: 992px) {
+
+      section {
+         box-shadow: 2px 2px 10px 2px #000;
+         border-bottom: 1px solid #444;
+         border-top: 1px solid #444;
+         border-radius: 5px;
       }
    }
 

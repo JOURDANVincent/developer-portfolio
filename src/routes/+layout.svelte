@@ -65,24 +65,15 @@
 	@media (min-width: 792px) {
 
 		main {
-			max-width: 940px;
+			max-width: 680px;
 			margin-inline: auto;
 		}
 	}
 
-	footer {
-		display: flex;
-		writing-mode: vertical-lr;
-		justify-content: space-between;
-		align-items: flex-end;
-		padding: 24px 12px;
-		color: #777;
-	}
-
-	@media (min-width: 991px) {
+	@media (min-width: 992px) {
 
 		main {
-			max-width: 880px;
+			max-width: 860px;
 		}
 	}
 
@@ -93,10 +84,10 @@
 		}
 	}
 
-	@media (min-width: 1600px) {
+	@media (min-width: 1400px) {
 
 		main {
-			max-width: 1100px;
+			max-width: 1000px;
 		}
 	}
 

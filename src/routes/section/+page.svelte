@@ -34,13 +34,37 @@
       width: 100%;
       text-align: justify;
       padding-top: 72px;
-      /* box-sizing: border-box; */
-
-      /* &:first-of-type {
-         padding-top: 108px;
-      } */
       &:last-of-type {
-         padding-bottom: 72px;
+         padding-bottom: 96px;
+      }
+   }
+
+   @media (min-width: 768px) {
+
+      section {
+         max-width: 700px;
+      }
+   }
+
+   @media (min-width: 992px) {
+
+      section {
+         max-width: 700px;
+      }
+   }
+
+   @media (min-width: 1180px) {
+
+      section {
+         max-width: 800px;
+         padding-top: 120px;
+      }
+   }
+
+   @media (min-width: 1400px) {
+
+      section {
+         max-width: 900px;
       }
    }
 

@@ -120,8 +120,8 @@
                 box-sizing: content-box;
 
                 & span {
-                    height: 100%;
-                    width: 30px;
+                    height: 24px;
+                    width: 24px;
                     display: flex;
                     align-items: center;
                     justify-content: center;
@@ -131,6 +131,7 @@
                     border-radius: 15px;
                     border: 1px solid #e14242;
                     margin-left: 12px;
+                    margin-right: 2px;
                 }
             }
 

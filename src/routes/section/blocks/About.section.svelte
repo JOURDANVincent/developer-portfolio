@@ -6,9 +6,9 @@
 
 </script>
 
-<section>
+<div class="about-section">
 
-    <div class=perso-box>
+    <div class=identity-box>
         <div>
 
             <h1>A propos</h1>
@@ -70,28 +70,24 @@
 
     </div>
 
-</section>
+    {#if !moreAbout}
+        <button on:click={() => moreAbout = true} class="moreAbout" aria-label="affiche le reste du text about" >
+            en savoir plus <span>+</span>
+        </button>
+    {/if}
 
-{#if !moreAbout}
-    <button on:click={() => moreAbout = true} class="moreAbout" aria-label="affiche le reste du text about" >
-        en savoir plus <span>+</span>
-    </button>
-{/if}
+</div>
+
+
 
 <style lang="css">
 
-    section {
-        max-width: 700px;
-    }
 
-    .perso-box {
-        /* background-color: #0004;
-        padding: 24px; */
+    .identity-box {
         margin-bottom: 24px;
         display: grid;
         grid-template-columns: 1fr 320px;
         align-items: flex-end;
-        /* padding-inline: 20px; */
         padding-bottom: 20px;
         border-bottom: 1px solid #444;
 
@@ -112,7 +108,7 @@
     }
 
     .moreAbout {
-        height: 30px;
+        /* height: 34px; */
         background-color: transparent;
         display: inline-flex;
         align-items: center;
@@ -128,8 +124,8 @@
         box-sizing: content-box;
 
         & span {
-            height: 100%;
-            width: 30px;
+            height: 21px;
+            width: 21px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -139,6 +135,7 @@
             line-height: 2rem;
             border-radius: 15px;
             border: 1px solid #e14242;
+            margin: 3px;
             margin-left: 12px;
         }
     }

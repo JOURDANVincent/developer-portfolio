@@ -10,27 +10,36 @@
 
    <div class="contact">
 
-      <h1>Contact</h1>
+      <!-- <h1>Contact</h1> -->
 
-      <p>Si tu souhaites me contacter c'est par ici..</p>
-   
-      <a href='https://www.linkedin.com/in/VincentJourdan' 
-         target="_blank" rel="noreferrer"
-         title="lien vers mon profil Linkedin"
-      >
-         <span class="iconSvg"><LinkedinSvg size={36} color={'#444'} /></span>
-         <span class="linkName">Linkedin</span>
-      </a>
+      <div class="identity">
+         <div class=detail>Nom <span>JOURDAN</span></div>
+         <div class=detail>Prénom <span>Vincent</span></div>
+         <div class=detail>Age <span>40 ans</span></div>
+         <div class=detail>Ville <span>AMIENS</span></div>
+      </div>
 
-      <p>Tu peux aussi voir mes projets GitHub ici..</p>
+      <div>
+         <p>Si tu souhaites me contacter c'est par ici..</p>
    
-      <a href='https://www.linkedin.com/in/VincentJourdan' 
-         target="_blank" rel="noreferrer"
-         title="lien vers mon dépôt github" 
-      >
-         <span class="iconSvg"><GithubSvg size={36} color={'#777'} /></span>
-         <span class="linkName">GitHub</span>
-      </a>
+         <a href='https://www.linkedin.com/in/VincentJourdan' 
+            target="_blank" rel="noreferrer"
+            title="lien vers mon profil Linkedin"
+         >
+            <span class="iconSvg"><LinkedinSvg size={36} color={'#444'} /></span>
+            <span class="linkName">Linkedin</span>
+         </a>
+
+         <p>Tu peux aussi voir mes projets GitHub ici..</p>
+      
+         <a href='https://www.linkedin.com/in/VincentJourdan' 
+            target="_blank" rel="noreferrer"
+            title="lien vers mon dépôt github" 
+         >
+            <span class="iconSvg"><GithubSvg size={36} color={'#777'} /></span>
+            <span class="linkName">GitHub</span>
+         </a>
+      </div>
 
    </div>
 
@@ -51,9 +60,26 @@
    }
 
    .contact {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
       & h1 {
+         margin-bottom: 32px;
+      }
+
+      & .identity {
          margin-bottom: 24px;
+         font-size: 1.8rem;
+
+         & .detail {
+            color: #777;
+         }
+
+         & span {
+            color: #fff;
+         }
       }
 
       & p {

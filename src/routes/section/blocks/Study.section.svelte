@@ -21,6 +21,15 @@
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
+        /* box-sizing: border-box; */
+    }
+
+    @media(max-width: 768px) {
+
+        .study-section {
+            flex-direction: column;
+            box-sizing: border-box;
+        }
     }
 
 </style>

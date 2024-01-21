@@ -28,26 +28,25 @@
 <style lang="css">
 
     .card {
-        width: 360px;
+        width: auto;
         background-color: #0005;
         -webkit-backdrop-filter: blur(8px);
         backdrop-filter: blur(8px);
-        padding: 24px; 
+        padding: 18px; 
         padding-bottom: 12px;
-        /* box-sizing: border-box; */
         border: 1px solid #000;
         border-radius: 3px;
-        margin-right: 8px;
+        margin-bottom: 8px;
     }
 
     h2 {
-        font-size: 1.6rem; 
+        font-size: 1.4rem; 
         color: #fff; 
         margin-bottom: 8px;
     }
 
     h3 {
-        font-size: 1.2rem; 
+        font-size: 1rem; 
         font-weight: bold; 
         color: #e37070;
         color: #777;
@@ -84,12 +83,37 @@
         padding-left: 10px;
     }
 
-    @media (max-width: 768px) {
+    @media (min-width: 820px) {
+
         .card {
-            padding: 12px 16px 6px 16px; 
+            width: 340px;
+            margin-right: initial;
+            margin-right: 8px;
+            margin-bottom: 8px;
+            padding: 24px; 
+            padding-bottom: 12px;
         }
+    }
+
+    @media (min-width: 1024px) {
+
         h2 {
             font-size: 1.5rem;
+        }
+
+        h3 {
+            font-size: 1.1rem; 
+        }
+    }
+
+    @media (min-width: 1180px) {
+
+        h2 {
+            font-size: 1.6rem;
+        }
+
+        h3 {
+            font-size: 1.2rem; 
         }
     }
 

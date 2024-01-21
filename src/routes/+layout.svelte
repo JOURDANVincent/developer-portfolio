@@ -37,7 +37,7 @@
 
 <div class="app">
 
-	<!-- <Navbar /> -->
+	<Navbar />
 
 	<main>
 		<slot />

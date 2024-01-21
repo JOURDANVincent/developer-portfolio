@@ -78,37 +78,44 @@
 
 </div>
 
-
-
 <style lang="css">
 
+    .about-section {
+        padding-inline: 16px;
+    }
 
     .identity-box {
+        width: 100%;
+        position: relative;
         margin-bottom: 24px;
-        display: grid;
-        grid-template-columns: 1fr 320px;
-        align-items: flex-end;
-        padding-bottom: 20px;
-        border-bottom: 1px solid #444;
+    }
 
-        & .detail {
-            color: #aaa;
-            font-size: 1.2rem;
-            font-weight: bold;
+    .identity-box img {
+        object-fit: contain;
+        margin-top: 24px;
+    }
 
-            & span {
-                color: #fff;
-            }
-        }
+    .detail {
+        color: #777;
+        font-size: 1rem;
+        font-weight: bold;
+    }
 
-        & img { 
-            width: 100%;
-            border-radius: 3px;
-        }
+    .detail span {
+        color: #fff;
+        margin-left: 6px;
+    }
+
+    .identity-box img { 
+        width: 100%;
+        border-radius: 3px;
+    }
+
+    .overview p {
+        font-size: 1rem;
     }
 
     .moreAbout {
-        /* height: 34px; */
         background-color: transparent;
         display: inline-flex;
         align-items: center;
@@ -122,21 +129,49 @@
         color: #fff;
         font-size: 0.8rem;
         box-sizing: content-box;
+    }
 
-        & span {
-            height: 21px;
-            width: 21px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #e14242;
-            color: #000;
-            font-size: 2rem;
-            line-height: 2rem;
-            border-radius: 15px;
-            border: 1px solid #e14242;
-            margin: 3px;
-            margin-left: 12px;
+    .moreAbout span {
+        height: 21px;
+        width: 21px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #e14242;
+        color: #000;
+        font-size: 2rem;
+        line-height: 2rem;
+        border-radius: 15px;
+        border: 1px solid #e14242;
+        margin: 3px;
+        margin-left: 12px;
+    }
+
+    @media(min-width: 768px) {
+
+        .about-section {
+            padding-inline: initial;
+        }
+
+        .identity-box {
+            margin-bottom: 24px;
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            align-items: flex-end;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #444;
+        }
+
+        .identity-box {
+            margin-top: initial;
+        }
+
+        .detail {
+            font-size: 1.2rem;
+        }
+
+        .overview {
+            font-size: initial;
         }
     }
 

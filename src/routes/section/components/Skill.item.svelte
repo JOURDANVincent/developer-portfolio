@@ -39,60 +39,47 @@
 <style lang="css">
 
     .item {
-        /* width: 100%; */
-        /* max-width: 375px; */
         background-color: transparent;
         min-height: 46px;
         width: auto;
         -webkit-backdrop-filter: blur(8px);
         backdrop-filter: blur(8px);
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         margin-bottom: 6px;
         margin-right: 6px;
         padding-inline: 4px;
         padding-bottom: 2px;
-        /* padding-right: 3px; */
-        /* padding: 8px 3px 8px 12px; */
-        /* box-shadow:  1px 1px 5px 2px #fff2; */
         border: 1px solid #333;
         box-sizing: border-box;
         border-radius: 10px;
     }
 
     img {
-        /* padding-right: 5px; */
         margin-left: 6px;
-        /* padding: 3px; */
-        filter: grayscale();
+        /* filter: grayscale(); */
     }
 
     .content {
-        /* width: 100%; */
         min-width: 60px;
         display: flex;
         flex-direction: column;
+        align-items: center;
         justify-content: center;
         box-sizing: border-box;
-        /* margin-left: 8px; */
     }
 
     img {
         height: 28px;
         width: 28px;
+        margin-right: 6px;
     }
 
     .text-block {
         display: inline-flex;
         align-items: flex-end;
         justify-content: space-between;
-    }
-
-    .text-block > p {
-        font-size: 1rem; 
-        color: #aaa;
-        margin: 0;
     }
 
     h3 {
@@ -132,16 +119,35 @@
         box-sizing: border-box;
     }
 
-    @media (min-width: 768px) {
-        
+    @media (max-width: 768px) {
+
         .item {
-            /* padding: 6px 3px 6px 12px; */
+            padding: 6px;
+            box-shadow: 1px 1px 3px 1px #000;
         }
 
+        .content {
+            min-width: initial;
+            width: 100%;
+            margin-top: 8px;
+        }
+
+        h3 {
+            font-size: 0.6rem;
+        }
+    }
+
+    @media (min-width: 768px) {
+
+        .item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+        
         img {
             height: 100%;
             width: 28px;
-            /* padding-right: 5px; */
         }
 
         .content {
@@ -157,18 +163,7 @@
 
         .item {
             margin-right: 3px;
-            /* min-width: calc(50% - 3px);
-            max-width: calc(50% - 3px); */
         }
     }  
-
-    @media (min-width: 992px) {
-
-        .item {
-            /* margin-right: 3px;
-            min-width: calc(33.3% - 3px);
-            max-width: calc(33.3% - 3px); */
-        }
-    }
 
 </style>

@@ -50,23 +50,22 @@
 <style lang="css">
 
     .card {
-        width: 640px;
+        width: 100%;
         background-color: #fff2;
         -webkit-backdrop-filter: blur(8px);
         backdrop-filter: blur(8px);
         color: #fff; 
         text-align: initial;
-        /* padding: 24px; */
         padding-inline: 24px;
         padding-top: 24px;
         padding-bottom: 12px;
         margin-bottom: 24px;
         box-sizing: border-box;
-        /* box-shadow: 2px 2px 5px 2px #000; */
         border-radius: 3px;
     }
 
     .card-header {
+        /* z-index: 1; */
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
@@ -74,29 +73,35 @@
     }
 
     .date {
-        /* height: 200px; */
-        font-size: 4.6rem;
+        z-index: 0;
+        position: absolute;
+        /* top: 102px; */
+        bottom: 20px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 9rem;
         line-height: 4.5rem;
         font-weight: bold;
-        color: #000;
-        vertical-align: text-top;
+        color: #444;
     }
 
     h2 {
-        font-size: 2.1rem; 
+        font-size: 1.5rem; 
         color: #fff;
     }
 
     h3 {
         color: #E14242;
-        font-size: 2rem; 
+        font-size: 1.4rem; 
         font-weight: bold; 
     }
     
     p {
+        z-index: 2;
+        position: relative;
         color: #aaa;
         font-weight: bold;
-        /* margin-bottom: 4px; */
         font-size: 1.3rem;
     }
 
@@ -113,7 +118,7 @@
 
     .techno {
         width: 100%;
-        font-size: 1.2rem;
+        font-size: 1rem;
         font-style: italic;
         display: inline-flex; 
         justify-content: center;
@@ -134,6 +139,51 @@
         color: #000; 
         font-weight: bold;
         padding-left: 10px;
+    }
+
+    @media(min-width: 768px) {
+
+        .card {
+            max-width: 640px;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .date {
+            position: inherit;
+            display: flex;
+            font-size: 4.6rem;
+            line-height: 4.5rem;
+            color: #000;
+        }
+
+        h2 {
+            font-size: 2.1rem; 
+        }
+
+        h3 {
+            font-size: 2rem; 
+        }
+        
+        p {
+            font-size: 1.3rem;
+        }
+
+        .desc p {
+            font-size: 1rem;
+        }
+
+        .techno {
+            font-size: 1.2rem;
+        }
+
+        .techno > span {
+            width: 70px;
+        }
     }
 
 </style>

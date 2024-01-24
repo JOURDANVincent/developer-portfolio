@@ -34,9 +34,15 @@
       width: 100%;
       text-align: justify;
       padding-top: 72px;
-      &:last-of-type {
-         padding-bottom: 96px;
-      }
+      box-sizing: border-box;
+   }
+
+   section:last-of-type {
+      padding-bottom: 96px;
+   }
+
+   #skill, #study, #experience {
+      padding-inline: 16px;
    }
 
    @media (min-width: 768px) {
@@ -44,12 +50,9 @@
       section {
          max-width: 700px;
       }
-   }
 
-   @media (min-width: 992px) {
-
-      section {
-         max-width: 700px;
+      #skill, #study, #experience {
+         padding-inline: initial;
       }
    }
 

@@ -8,7 +8,7 @@
 
 <section>
 
-   <div class="contact">
+   <div class="contact-box">
 
       <h1>Contact</h1>
 
@@ -61,7 +61,7 @@
       padding-bottom: 24px;
    }
 
-   .contact {
+   .contact-box {
       height: 100%;
       display: flex;
       flex-direction: column;

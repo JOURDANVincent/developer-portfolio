@@ -6,7 +6,7 @@
  
 </script>
 
-<div class="main">
+<div class="home-section">
     
     <div class="hero">
         
@@ -45,7 +45,7 @@
 
 <style>
 
-    .main {
+    .home-section {
         height: 100%;
         display: grid;
         padding-inline: 12px;
@@ -91,7 +91,7 @@
 
     a {
         height: 30px;
-        background-color: #000;
+        background-color: #0002;
         display: inline-flex;
         align-items: center;
         padding-left: 18px;
@@ -166,7 +166,7 @@
 
     @media (min-width: 768px) {
 
-        .main {
+        .home-section {
             align-items: flex-end;
             padding-inline: initial;
         }
@@ -215,7 +215,7 @@
 
     @media (min-width: 992px) {
 
-        .main {
+        .home-section {
             display: grid;
             grid-template-columns: 1fr 410px;
             column-gap: 8px;

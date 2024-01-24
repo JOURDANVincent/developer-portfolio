@@ -39,7 +39,7 @@
 <style lang="css">
 
     .item {
-        background-color: transparent;
+        background-color: #fff1;
         min-height: 46px;
         width: auto;
         -webkit-backdrop-filter: blur(8px);
@@ -58,7 +58,7 @@
 
     img {
         margin-left: 6px;
-        /* filter: grayscale(); */
+        filter: grayscale();
     }
 
     .content {
@@ -123,7 +123,8 @@
 
         .item {
             padding: 6px;
-            box-shadow: 1px 1px 3px 1px #000;
+            border: none;
+            box-shadow: 1px 1px 3px 1px #0004;
         }
 
         .content {

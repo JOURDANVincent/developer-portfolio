@@ -14,32 +14,32 @@
 
    $: innerWidth = 0
 
+   // HANDLE DATE TO SHOW
    const dates = experiences.map((exp: any) => {
       return innerWidth >= 820 ? exp.date.replace('-', '\n') : exp.date
    }) // liste date à afficher dans carrousel
 
-   $: activeExp = 1;
+   // CARROUSEL ACTIVE DATE
+   $: expActived = 1;
+   const activeExpX = (date: string) => { 
+      expActived = dates.indexOf(date)
+   }
 
+   // CARROUSEL Y
    let scrollDateY: any;
-
    const parseScrollY = () => { // 200 -> hauteur en pixel /!\ valeur liée au css /!\
       if(scrollDateY.scrollTop % 200 == 0) {
-         activeExp = scrollDateY.scrollTop / 200
+         expActived = scrollDateY.scrollTop / 200
       }
    }
 
+   // CARROUSEL X
    let scrollDateX: any;
-
    const parseScrollX = () => { // 126 -> width + mr en pixel /!\ valeur liée au css /!\
       if(scrollDateX.scrollLeft % 126 == 0) {
-         activeExp = scrollDateX.scrollLeft / 126
+         expActived = scrollDateX.scrollLeft / 126
       }
    }
-
-   const expToActive = (date: string) => { 
-      activeExp = dates.indexOf(date)
-   }
-
 
 </script>
 
@@ -88,15 +88,15 @@
 
       <div class="date-scroll-x-box" bind:this={scrollDateX} on:scroll={parseScrollX} >
          {#each dates as date, i}
-            <button class="date-select" class:active={activeExp == i} on:click={() => expToActive(date)} >{date}</button>
+            <button class="date-select" class:active={expActived == i} on:click={() => activeExpX(date)} >{date}</button>
          {/each}
       </div>
       
       <div class="content">
-         <ExpMainCard {...experiences[activeExp]} />
+         <ExpMainCard {...experiences[expActived]} />
          <div class="dot-box">
             {#each dates as date, i}
-               <div class="dot" class:active={i == activeExp}></div>
+               <div class="dot" class:active={i == expActived}></div>
             {/each}
          </div>
       </div>
@@ -117,17 +117,6 @@
 
    .dev-exp {
       margin-bottom: 18px;
-   }
-
-   /* .full-exp {
-      border-top: 1px solid #444;
-      border-bottom: 1px solid #444;
-      box-shadow: 2px 2px 5px 2px #0002;
-      border-radius: 10px;
-   } */
-
-   .exp-section, .full-exp {
-      /* width: 100%; */
    }
 
    .date-scroll-y-box {
@@ -169,12 +158,11 @@
    .date-scroll-x-box .active {
       background-color: #fff2;
       color: #aaa;
-      /* border: 1px solid #777; */
    }
 
    .content {
       position: relative;
-      height: 100%;
+      height: auto;
    }
 
    .dot-box {

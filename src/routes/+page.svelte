@@ -183,7 +183,7 @@
 
         h2 {
             font-size: 2.6rem;
-            max-width: 600px;
+            max-width: 500px;
             margin-bottom: 18px;
             margin-top: 18px;
         }

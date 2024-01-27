@@ -20,7 +20,7 @@
    }) // liste date à afficher dans carrousel
 
    // CARROUSEL ACTIVE DATE
-   $: expActived = 1;
+   $: expActived = 0;
    const activeExpX = (date: string) => { 
       expActived = dates.indexOf(date)
    }

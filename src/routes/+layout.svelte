@@ -2,7 +2,7 @@
 	
 	// STORE & DATA
 	import { page } from '$app/stores';
-	import { expandNav, margWidth } from '$lib/stores/store'
+	import { expandNav, platform, orientation } from '$lib/stores/store'
 	// import { SITE_NAME, META_DATA } from '$lib/data/meta.data'
 
 	// COMPONENTS
@@ -11,8 +11,13 @@
 	// WINDOWS SIZE
 	$: innerWidth = 0;
 	$: innerHeight = 0;
+	$: x = 0;
 	$: expandNav.set(innerWidth >= 1460)
-	$: margWidth.set((innerWidth - 940) / 2)
+	$: innerHeight > innerWidth ? orientation.set('portrait') : orientation.set('landscape')
+	$: innerWidth < 768 ? platform.set('mobile') : innerWidth >= 768 && innerWidth <= 1180 ? platform.set('tablet') : platform.set('desktop')
+
+	$: console.log('platform', $platform);
+	
 
 </script>
 
@@ -33,7 +38,7 @@
 
 </svelte:head>
 
-<svelte:window bind:innerWidth bind:innerHeight />
+<svelte:window bind:innerWidth bind:innerHeight bind:outerHeight={x} />
 
 <div class="app">
 
@@ -62,7 +67,7 @@
 		padding-inline: 8px;
 	}
 
-	@media (min-width: 792px) {
+	@media (min-width: 768px) {
 
 		main {
 			/* max-width: 680px; */

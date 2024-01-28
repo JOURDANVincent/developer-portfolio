@@ -8,7 +8,7 @@
 	src: url(../fonts/Rajdhani-Bold.ttf);
 }
 
-:root {
+:root, button {
 	--font-body: 
 		rajdhani, 
 		Arial, 

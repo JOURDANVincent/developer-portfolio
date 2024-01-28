@@ -18,7 +18,7 @@
     
         <div class="links">
             <p>Suivez-moi ou découvrez mes projets</p>
-            <span><Linkedin size={34} color={'#fff'} /></span><span><Github size={34} color={'#fff'} /></span>
+            <span><Linkedin size={26} color={'#777'} /></span><span><Github size={26} color={'#777'} /></span>
         </div>
         
         <div class="buttons">
@@ -81,7 +81,8 @@
     }
 
     .links p {
-        font-size: 1.2rem;
+        font-size: 1rem;
+        color: #777;
         margin-bottom: 8px;
     }
 
@@ -97,31 +98,32 @@
         padding-left: 18px;
         margin-top: 12px;
         outline: none;
-        border-radius: 15px;
+        border-radius: 5px;
         border: 1px solid #e14242;
         color: #fff;
-        font-size: 1.2rem;
+        font-size: 1rem;
         box-sizing: border-box;
     }
 
     a .plus {
-        height: 24px;
-        width: 24px;
+        height: 21px;
+        width: 21px;
         display: flex;
         align-items: center;
         justify-content: center;
         background-color: #e14242;
         color: #000;
         font-size: 2.2rem;
-        border-radius: 15px;
+        font-weight: bold;
+        border-radius: 3px;
         border: 1px solid #e14242;
         margin-left: 12px;
         margin-right: 2px;
     }
 
     .contact {
-        background-color: #E14242;
-        border: 1px solid #000;
+        background-color: #222;
+        border: 1px solid #fff;
         padding-right: 16px;
         margin-right: 8px;
     }

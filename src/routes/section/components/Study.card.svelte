@@ -29,7 +29,7 @@
 
     .card {
         width: auto;
-        max-width: 340px;
+        /* max-width: 320px; */
         background-color: #0005;
         -webkit-backdrop-filter: blur(8px);
         backdrop-filter: blur(8px);
@@ -82,6 +82,14 @@
         font-weight: bold;
         font-style: italic;  
         padding-left: 10px;
+    }
+
+    @media (min-width: 768px) {
+
+        .card {
+            width: 300px;
+            margin-right: 8px;
+        }
     }
 
     @media (min-width: 820px) {

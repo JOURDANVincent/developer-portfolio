@@ -24,7 +24,7 @@
         box-sizing: border-box;
     }
 
-    @media(max-width: 768px) {
+    @media(max-width: 767px) {
 
         .study-section {
             flex-direction: column;

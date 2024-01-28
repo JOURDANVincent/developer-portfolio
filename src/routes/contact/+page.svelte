@@ -58,7 +58,7 @@
       box-sizing: border-box;
       padding-inline: 18px;
       padding-top: 72px;
-      padding-bottom: 24px;
+      padding-bottom: 80px;
    }
 
    .contact-box {
@@ -112,6 +112,7 @@
 
    .map {
       height: 100%;
+      width: 100%;
    }
 
    .map img {
@@ -130,17 +131,22 @@
    @media(min-width: 820px) {
 
       section {
-         max-width: 800px;
+         max-width: 740px;
          display: grid;
          grid-template-columns: 1fr 300px;
          column-gap: 48px;
          padding-top: 36px;
-         padding-bottom: 24px;
+         padding-bottom: 96px;
          padding-inline: 42px;
       }
 
       h1 {
          margin-bottom: 32px;
+      }
+
+      .map {
+         height: 100%;
+         width: 100%;
       }
    
    }
@@ -148,11 +154,11 @@
    @media(min-width: 992px) {
 
       section {
-         /* background-color: #0002; */
-         box-shadow: 2px 2px 5px 2px #0005;
+         max-width: 800px;
          border-bottom: 1px solid #444;
          border-top: 1px solid #444;
          border-radius: 5px;
+         padding-bottom: 40px;
       }
    }
 

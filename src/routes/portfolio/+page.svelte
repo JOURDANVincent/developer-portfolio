@@ -1,7 +1,5 @@
 <script lang="ts">
 
-   import { margWidth } from '$lib/stores/store'
-
    /** @type {import('./$types').PageData} */
    export let data: any;
    const projects = data.projects
@@ -48,6 +46,7 @@
       width: 100%;
       box-sizing: border-box;
       padding-inline: 8px;
+      padding-bottom: 66px;
    }
 
    .project-box {

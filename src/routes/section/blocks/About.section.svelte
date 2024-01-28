@@ -116,19 +116,19 @@
     }
 
     .moreAbout {
-        background-color: transparent;
+        height: 30px;
+        background-color: #0002;
         display: inline-flex;
         align-items: center;
-        justify-content: center;
-        padding:  0;
-        padding-left: 12px;
+        padding: 3px;
+        padding-left: 18px;
         margin-top: 12px;
         outline: none;
-        border-radius: 15px;
+        border-radius: 5px;
         border: 1px solid #e14242;
         color: #fff;
         font-size: 0.8rem;
-        box-sizing: content-box;
+        box-sizing: border-box;
     }
 
     .moreAbout span {
@@ -139,12 +139,12 @@
         justify-content: center;
         background-color: #e14242;
         color: #000;
-        font-size: 2rem;
-        line-height: 2rem;
-        border-radius: 15px;
+        font-size: 2.2rem;
+        font-weight: bold;
+        border-radius: 3px;
         border: 1px solid #e14242;
-        margin: 3px;
         margin-left: 12px;
+        /* margin-right: 2px; */
     }
 
     @media(min-width: 768px) {

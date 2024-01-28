@@ -119,7 +119,7 @@ export async function load() {
         experiences: [
             {
                 date: "2022",
-                duration: "25",
+                // duration: "25",
                 post: "Développeur Java / Angular",
                 place: "CGI - Amiens",
                 desc: [
@@ -134,7 +134,7 @@ export async function load() {
             },
             {
                 date: "2018-2020",
-                duration: "24",
+                // duration: "24",
                 place: "TECHNIQUES & INDUSTRIES",
                 post: "Technico-commercial",
                 desc: [
@@ -145,7 +145,7 @@ export async function load() {
             },
             {
                 date: "2013-2018",
-                duration: "60",
+                // duration: "60",
                 place: "MULTIVAC",
                 post: "Technicien SAV/CE",
                 desc: [
@@ -156,7 +156,7 @@ export async function load() {
             },
             {
                 date: "2013",
-                duration: "6",
+                // duration: "6",
                 place: "PPG",
                 post: "Technicien",
                 desc: [
@@ -166,7 +166,7 @@ export async function load() {
             },
             {
                 date: "2011-2012",
-                duration: "12",
+                // duration: "12",
                 place: "NEXANS",
                 post: "Technicien",
                 desc: [
@@ -176,7 +176,7 @@ export async function load() {
             },
             {
                 date: "2011",
-                duration: "3",
+                // duration: "3",
                 place: "VIRBAC",
                 post: "Technicien",
                 desc: [
@@ -185,7 +185,7 @@ export async function load() {
             },
             {
                 date: "2008-2010",
-                duration: "24",
+                // duration: "24",
                 place: "RACLOT",
                 post: "Technicien",
                 desc: [
@@ -196,8 +196,8 @@ export async function load() {
             },
             {
                 date: "2008",
-                duration: "",
-                place: "EMIN LEYDIER",
+                // duration: "",
+                // place: "EMIN LEYDIER",
                 post: "Électro-mécanicien",
                 desc: [
                     "Électro-mécanicien secteur cartonnerie"
@@ -205,7 +205,7 @@ export async function load() {
             },
             {
                 date: "2007",
-                duration: "4",
+                // duration: "4",
                 place: "NESTLE PURINA",
                 post: "Électricien / Automaticien",
                 desc: [
@@ -216,7 +216,7 @@ export async function load() {
             },
             {
                 date: "2006-2007",
-                duration: "18",
+                // duration: "18",
                 place: "DUNLOP",
                 post: "Électricien secteur B1/B2",
                 desc: [
@@ -225,7 +225,7 @@ export async function load() {
             },
             {
                 date: "2006",
-                duration: "4",
+                // duration: "4",
                 place: "GOODYEAR",
                 post: "Mécanicien",
                 desc: [
@@ -234,7 +234,7 @@ export async function load() {
             },
             {
                 date: "2005",
-                duration: "6",
+                // duration: "6",
                 place: "AIRBUS",
                 post: "Monteur / Ajusteur",
                 desc: [
@@ -246,7 +246,7 @@ export async function load() {
         studies: [
             {
                date: "2021",
-               duration: "6",
+            //    duration: "6",
                title: "Formation React Native",
                place: "La MANU - Amiens",
                desc: "Maîtrise du framework React Native",
@@ -254,7 +254,7 @@ export async function load() {
             },
             {
                date: "2020-2021",
-               duration: "3",
+            //    duration: "3",
                title: "Formation Web & Web Mobile",
                place: "La MANU - Amiens",
                desc: "RNCP 31114, Niveau 5, Bac+2",

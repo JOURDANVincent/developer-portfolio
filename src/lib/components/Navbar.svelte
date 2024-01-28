@@ -181,7 +181,7 @@
    button .link, .link {
       font-size: 0.6rem;
       line-height: 0.6rem;
-      color: #fff;
+      color: #eee;
       /* margin-left: 12px; */
    }
 

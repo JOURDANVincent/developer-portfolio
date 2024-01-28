@@ -82,7 +82,7 @@
 
     .links p {
         font-size: 1rem;
-        color: #777;
+        color: #ccc;
         margin-bottom: 8px;
     }
 

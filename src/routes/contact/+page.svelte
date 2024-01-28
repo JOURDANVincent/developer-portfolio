@@ -160,7 +160,7 @@
       }
 
       .map img {
-         opacity: 1;
+         opacity: 0.5;
       }
    
    }

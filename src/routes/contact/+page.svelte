@@ -57,11 +57,13 @@
       align-items: center;
       box-sizing: border-box;
       padding-inline: 18px;
-      padding-top: 72px;
-      padding-bottom: 80px;
+      /* padding-top: 72px;
+      padding-bottom: 92px; */
    }
 
    .contact-box {
+      position: relative;
+      z-index: 1;
       height: 100%;
       display: flex;
       flex-direction: column;
@@ -111,14 +113,21 @@
    }
 
    .map {
-      height: 100%;
-      width: 100%;
+      z-index: 0;
+      position: absolute;
+      bottom: 0;
+      top: 0;
+      left: 8px;
+      right: 8px;
+      /* height: 100%;
+      width: 100%; */
    }
 
    .map img {
       height: 100%;
       width: 100%;
       object-fit: contain;
+      opacity: 0.1;
    }
 
    @media(max-width: 819px) {
@@ -128,7 +137,7 @@
       }
    }
 
-   @media(min-width: 820px) {
+   @media(min-width: 768px) {
 
       section {
          max-width: 740px;
@@ -147,6 +156,11 @@
       .map {
          height: 100%;
          width: 100%;
+         position: inherit;
+      }
+
+      .map img {
+         opacity: 1;
       }
    
    }

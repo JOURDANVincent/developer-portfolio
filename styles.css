@@ -1,12 +1,12 @@
 /* font rajdhani */
-@font-face {
+/* @font-face {
 	font-family: rajdhani;
 	src: url(../fonts/Rajdhani-Regular.ttf);
 }
 @font-face {
 	font-family: rajdhani-bold;
 	src: url(../fonts/Rajdhani-Bold.ttf);
-}
+} */
 
 :root, button {
 	--font-body: 

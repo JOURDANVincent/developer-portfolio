@@ -2,12 +2,12 @@
 @font-face {
 	font-family: rajdhani;
 	src: url('../fonts/Rajdhani-Regular.ttf');
-	font-display: swap;
+	/* font-display: swap; */
 }
 @font-face {
 	font-family: rajdhani-bold;
 	src: url('../fonts/Rajdhani-Bold.ttf');
-	font-display: swap;
+	/* font-display: swap; */
 }
 
 :root, button {

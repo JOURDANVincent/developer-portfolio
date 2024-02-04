@@ -7,50 +7,16 @@ html, body {
 	box-sizing: border-box;
 	background-color: #111;
 	background-image: 
-		/* radial-gradient(
-			#111 50%,
-			#444 100%
-		), */
 		linear-gradient(45deg, #151515 30%, #252525 );
 	background-attachment: fixed;
-	/* background-size: contain; */
-	/* box-sizing: border-box; */
 }
 
 h1, h2, h3, p {
 	padding: 0; margin: 0;
 }
 
-h1 {
-	font-size: 3rem;
-	color: #E14242;
-	margin-bottom: 12px;
-	font-weight: initial;	
-}
-
-h2 {
-	font-size: 1.6rem;
-	color: #777;
-	margin-bottom: 8px;
-}
-
-p {
-	font-size: 1.1rem;
-	margin-bottom: 6px;
-}
-
-p strong {
-	color: #777;
-}
-
 a:hover, button:hover {
 	cursor: pointer;
-}
-
-a {
-	text-decoration: none;
-	color: #fff;
-	font-size: 1.2rem;
 }
 
 /* SCROLL BAR */
